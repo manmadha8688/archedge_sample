@@ -116,25 +116,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Intersection Observer for animations
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.5,
         rootMargin: '0px 0px -50px 0px'
     };
 
+    const directions = ['slide-in-top', 'slide-in-bottom', 'slide-in-top', 'slide-in-bottom'];
+
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
+            const benefitItem = entry.target;
+            const index = Array.from(benefitItem.parentNode.children).indexOf(benefitItem);
+            const directionClass = directions[index % directions.length];
+            const icon = benefitItem.querySelector('.benefit-icon');
+            const heading = benefitItem.querySelector('h3');
+
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                benefitItem.classList.add('visible');
+                benefitItem.classList.add(directionClass);
+                if (icon) icon.classList.add('visible');
+                if (heading) heading.classList.add('visible');
+                // Do not remove classes on exit to prevent blinking
             }
         });
     }, observerOptions);
 
+    // New observer for core-benefits section to toggle animation
+    const coreBenefitsSection = document.querySelector('.core-benefits');
+    const coreObserverOptions = {
+        threshold: 0.1
+    };
+
+    const coreObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            const benefitItems = coreBenefitsSection.querySelectorAll('.benefit-item');
+            if (entry.isIntersecting) {
+                benefitItems.forEach(item => item.classList.add('animate'));
+            } else {
+                benefitItems.forEach(item => item.classList.remove('animate'));
+            }
+        });
+    }, coreObserverOptions);
+
+    if (coreBenefitsSection) {
+        coreObserver.observe(coreBenefitsSection);
+    }
+
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.benefit-item, .product-card, .range-item, .testimonial');
+    const animatedElements = document.querySelectorAll('.benefit-item');
     animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.classList.remove('visible');
+        el.classList.remove(...directions);
         observer.observe(el);
     });
 
