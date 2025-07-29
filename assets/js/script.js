@@ -1,4 +1,33 @@
-// Mobile Menu Toggle
+const cards = document.querySelectorAll('.explore-card');
+const grid = document.querySelector('.explore-grid');
+const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const idx = Array.from(cards).indexOf(entry.target);
+      const row = Math.floor(idx / columns);
+      const col = idx % columns;
+      // Delay by row, then by column for staggered effect
+      setTimeout(() => {
+        entry.target.classList.add('animate');
+        // Delay image fade-in (after card animation, e.g. 900ms)
+        setTimeout(() => {
+          const img = entry.target.querySelector('img');
+          if (img) img.classList.add('show-img');
+        }, 700);
+      }, row * 600 + col * 500);
+    } else {
+      entry.target.classList.remove('animate');
+      const img = entry.target.querySelector('img');
+      if (img) img.classList.remove('show-img');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+cards.forEach(card => observer.observe(card));
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -87,7 +116,27 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenuToggle.classList.remove('active');
         });
     });
+const imgs = document.querySelectorAll('.circle-container img');
+  let current = 0;
 
+  function rotateImages() {
+    imgs.forEach((img, i) => {
+      img.classList.remove('active');
+      img.classList.remove(`img${i + 1}`);
+    });
+
+    imgs[current].classList.add('active');
+
+    for (let i = 1; i <= 4; i++) {
+      let idx = (current + i) % imgs.length;
+      imgs[idx].classList.add(`img${i}`);
+    }
+
+    current = (current + 1) % imgs.length;
+  }
+
+  rotateImages();
+  setInterval(rotateImages, 3000);
     // Active navigation link on scroll
     window.addEventListener('scroll', function() {
         const sections = document.querySelectorAll('section');
@@ -143,21 +192,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // New observer for core-benefits section to toggle animation
     const coreBenefitsSection = document.querySelector('.core-benefits');
     const coreObserverOptions = {
-        threshold: 0.1
+        threshold: 1.0
     };
 
     const coreObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             const benefitItems = coreBenefitsSection.querySelectorAll('.benefit-item');
-            if (entry.isIntersecting) {
-                benefitItems.forEach(item => item.classList.add('animate'));
+            if (!entry.isIntersecting) {
+                benefitItems.forEach(item => item.classList.remove('animate'));
             }
-            // Removed removal of 'animate' class on exit to keep boxes stuck
         });
     }, coreObserverOptions);
 
     if (coreBenefitsSection) {
         coreObserver.observe(coreBenefitsSection);
+    }
+
+    // New observer for core-benefits section heading to start animation
+    const coreBenefitsHeading = document.querySelector('.core-benefits .section-title');
+    const headingObserverOptions = {
+        threshold: 0
+    };
+
+    const headingObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            const benefitItems = coreBenefitsSection.querySelectorAll('.benefit-item');
+            if (entry.isIntersecting) {
+                benefitItems.forEach(item => item.classList.add('animate'));
+            }
+        });
+    }, headingObserverOptions);
+
+    if (coreBenefitsHeading) {
+        headingObserver.observe(coreBenefitsHeading);
     }
 
     // Observe elements for animation

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smash-In Product Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+    }
+
+    .explore-products {
+      padding: 60px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .explore-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: translateY(-300px) scale(0.8);
+      opacity: 0;
+      transition: all 0.8s ease-out;
+    }
+
+    .explore-card.animate {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    .explore-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .explore-card h3 {
+      margin-top: 15px;
+      font-size: 1.2em;
+    }
+
+    .explore-card p {
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .explore-cta {
+      margin-top: 40px;
+    }
+
+    .cta-button {
+      background: #000;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Product Section -->
+<section class="explore-products" id="product-section">
+  <div class="container">
+    <h2 class="section-title">Explore Our Premium Product Range</h2>
+    <p class="section-description">
+      Discover elegant surface designs that bring interiors to life — from high-gloss panels to natural textures.
+    </p>
+
+    <div class="explore-grid">
+      <div class="explore-card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=800&q=80" alt="Glossy Laminates"/><h3>Glossy Laminates</h3><p>High-shine finish with premium durability.</p></div>
+      <div class="explore-card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=800&q=80" alt="Glossy Laminates"/><h3>Glossy Laminates</h3><p>High-shine finish with premium durability.</p></div>
+      <div class="explore-card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=800&q=80" alt="Glossy Laminates"/><h3>Glossy Laminates</h3><p>High-shine finish with premium durability.</p></div>
+
+      <div class="explore-card"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="3D Wall Art Panels"/><h3>3D Wall Art</h3><p>Make a bold interior statement with 3D forms.</p></div>
+      <div class="explore-card"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="3D Wall Art Panels"/><h3>3D Wall Art</h3><p>Make a bold interior statement with 3D forms.</p></div>
+      <div class="explore-card"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="3D Wall Art Panels"/><h3>3D Wall Art</h3><p>Make a bold interior statement with 3D forms.</p></div>
+    </div>
+
+    <div class="explore-cta">
+      <a href="/products" class="cta-button">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const cards = document.querySelectorAll('.explore-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+        }, i * 400); // delay each card
+      } else {
+        entry.target.classList.remove('animate');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
