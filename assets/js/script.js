@@ -151,9 +151,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const benefitItems = coreBenefitsSection.querySelectorAll('.benefit-item');
             if (entry.isIntersecting) {
                 benefitItems.forEach(item => item.classList.add('animate'));
-            } else {
-                benefitItems.forEach(item => item.classList.remove('animate'));
             }
+            // Removed removal of 'animate' class on exit to keep boxes stuck
         });
     }, coreObserverOptions);
 
