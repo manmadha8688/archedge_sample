@@ -1,3 +1,7 @@
+body{
+  
+  background: linear-gradient(120deg, #acc6f9 0%, #c5ceeb 60%, #dbf6e3 100%);
+}
 .hero {
   position: relative;
   height: 90vh;
@@ -224,7 +228,7 @@
     font-weight: 700;
     margin:-20px 0 40px 0;
     color: #1e293b;
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
 }
 

@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Mystic Panels - Innovative Decorative Surfaces</title>
-    <meta name="description" content="Get in touch with Mystic Panels for your decorative surface needs.">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
+    <head>
+        
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    </head>
+    <body>
+        
+        <header class="header">
         <div class="container">
             <nav class="navbar">
-                <div class="nav-spacer"></div>
+               <a href="/"> <img src="../assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
                 
+                <a href="/"> 
                 <div class="nav-company">
                     <div class="company-info">
-                        <div class="company-name">
-                            <span class="company-title">Mystic Panels</span>
-                        </div>
-                        <div class="company-subtitle">Innovative Decorative Surfaces</div>
+                        
                     </div>
                 </div>
+                </a>
                 
                 <div class="nav-center">
                     <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search products...">
+                        <input type="text" class="search-input" placeholder="Search products..." />
                         <button class="search-btn">
                             <i class="fas fa-search"></i>
                         </button>
@@ -37,204 +31,89 @@
                 <div class="nav-right">
                     <ul class="nav-menu">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">
+                            <a href="/" class="nav-link active">
                                 <span class="nav-text">Home</span>
                                 <span class="nav-indicator"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/about/" class="nav-link">
+                            <a href="../about/" class="nav-link">
                                 <span class="nav-text">About</span>
                                 <span class="nav-indicator"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/products/" class="nav-link">
+                            <a href="../products/" class="nav-link">
                                 <span class="nav-text">Products</span>
                                 <span class="nav-indicator"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/contact/" class="nav-link active">
+                            <a href="../contact/" class="nav-link">
                                 <span class="nav-text">Contact</span>
                                 <span class="nav-indicator"></span>
                             </a>
                         </li>
                     </ul>
-                    <div class="mobile-menu-toggle">
+                    <div class="mobile-menu-toggle" role="button" aria-label="Toggle menu" tabindex="0">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
+                        <span class="menu-label">Menu</span>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Contact Content -->
-    <main class="main-content">
-        <section class="contact-hero">
-            <div class="container">
-                <div class="contact-hero-content">
-                    <h1 class="contact-title">Contact Us</h1>
-                    <p class="contact-subtitle">Ready to transform your space? Let's discuss your project</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-content">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-form-section">
-                        <h2>Get a Quote</h2>
-                        <form class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="projectType">Project Type</label>
-                                <select id="projectType" name="projectType" required>
-                                    <option value="">Select project type</option>
-                                    <option value="residential">Residential</option>
-                                    <option value="commercial">Commercial</option>
-                                    <option value="custom">Custom Design</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Project Details</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-
-                    <div class="contact-info-section">
-                        <h2>Get in Touch</h2>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Phone</h4>
-                                    <p>(555) 123-4567</p>
-                                    <p>Mon-Fri: 9AM-6PM</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Email</h4>
-                                    <p>info@mysticpanels.com</p>
-                                    <p>quotes@mysticpanels.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Address</h4>
-                                    <p>123 Design Street</p>
-                                    <p>Innovation City, IC 12345</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="social-links">
-                            <h3>Follow Us</h3>
-                            <div class="social-icons">
-                                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-map">
-            <div class="container">
-                <h2 class="section-title">Visit Our Showroom</h2>
-                <div class="map-placeholder">
-                    <div class="map-content">
-                        <i class="fas fa-map"></i>
-                        <h3>Interactive Map</h3>
-                        <p>123 Design Street, Innovation City, IC 12345</p>
-                        <a href="#" class="btn btn-secondary">Get Directions</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Start Your Project?</h2>
-                    <p>Our design experts are here to help bring your vision to life.</p>
-                    <div class="cta-buttons">
-                        <a href="tel:+15551234567" class="btn btn-primary">Call Now</a>
-                        <a href="mailto:info@mysticpanels.com" class="btn btn-secondary">Email Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main style="display:flex; justify-content:center; align-items:center; height:60vh; font-family: Arial, sans-serif;">
+      <div style="text-align:center; border: 2px solid #3498db; padding: 40px; border-radius: 10px; box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);">
+        <h1 style="color: #3498db; font-size: 3rem; margin-bottom: 20px;">Coming Soon</h1>
+        <p style="font-size: 1.2rem; color: #555;">This page is under construction. Please check back later.</p>
+      </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Mystic Panels</h4>
-                    <p>Innovative decorative surfaces for inspired spaces.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about/index.html">About</a></li>
-                        <li><a href="../products/index.html">Products</a></li>
-                        <li><a href="index.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: info@mysticpanels.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mystic Panels. All rights reserved.</p>
-            </div>
+     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img src="../assets/images/logo.png" alt="Archedge Logo" class="footer-logo" />
+          <p>We supply waterproof, termite-resistant, and design-rich wall and ceiling panels for modern interiors and exteriors.</p>
         </div>
+
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <p>Have a project in mind? Let's talk: <a href="mailto:archedge@gmail.com">archedge@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919121188172">+91 91211 88172</a></p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Visit Us</h4>
+          <p>
+            H. No: 11-13-302, Ground Floor,<br>
+            Road No - 9, Alkapuri Colony, Kothapet,<br>
+            Saroornagar Mandal, Hyderabad,<br>
+            Ranga Reddy Dist. 500035.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Specialties</h4>
+          <ul>
+            <li>Decorative Wall Panels</li>
+            <li>Ceiling Design Panels</li>
+            <li>Waterproof Flooring</li>
+            <li>PU Decorative Mouldings</li>
+            <li>Stone & Brick Finish Panels</li>
+            <li>Acrylic & Laminate Sheets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2025 Archedge Interiors. All Rights Reserved.
+      </div>
     </footer>
 
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navbar.js"></script>
 </body>
 </html>
-
-
-
-
-
-
