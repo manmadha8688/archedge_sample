@@ -22,7 +22,7 @@ a {
 }
 
 .header {
-  background: linear-gradient(90deg, #233876 100%, #2b447a 60%, #3b5998 0%);
+  background: rgba(246, 245, 245, 0)
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   border-bottom: 1px solid rgba(59, 89, 152, 0.15);
