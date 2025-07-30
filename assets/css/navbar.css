@@ -21,38 +21,33 @@ a {
   text-decoration: none;
 }
 
-/* World-Class Premium Header */
 .header {
-    background: 
-        linear-gradient(135deg, 
-            rgba(16, 185, 129, 0.95) 0%,
-            rgba(5, 150, 105, 0.95) 15%,
-            rgba(6, 78, 59, 0.95) 30%,
-            rgba(17, 24, 39, 0.95) 50%,
-            rgba(30, 41, 59, 0.95) 70%,
-            rgba(51, 65, 85, 0.95) 85%,
-            rgba(71, 85, 105, 0.95) 100%),
-        radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 
-        0 25px 50px -12px rgba(0, 0, 0, 0.25),
-        0 0 0 1px rgba(255, 255, 255, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    border-radius: 0 0 24px 24px;
+  background: linear-gradient(90deg, #233876 100%, #2b447a 60%, #3b5998 0%);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: 1px solid rgba(59, 89, 152, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 16px rgba(32, 32, 154, 0.08);
 }
 
-.header::before {
+.header.scrolled {
+    
+  background: linear-gradient(90deg, #233876 100%, #2b447a 60%, #3b5998 0%);
+    box-shadow: 
+        0 32px 64px -12px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px) scale(1.001);
+    backdrop-filter: blur(60px) saturate(200%);
+}
+
+/* Removed light background animations from header */
+/* .header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -65,43 +60,6 @@ a {
             rgba(255, 255, 255, 0.1) 25%,
             rgba(16, 185, 129, 0.2) 50%,
             rgba(255, 255, 255, 0.1) 75%,
-            transparent 100%);
-    animation: premiumShimmer 4s ease-in-out infinite;
-    pointer-events: none;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), 
-            rgba(255, 255, 255, 0.06), 
-            transparent 40%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-@keyframes premiumShimmer {
-    0%, 100% { 
-        transform: translateX(-100%) rotate(0deg); 
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% { 
-        transform: translateX(100%) rotate(180deg); 
-        opacity: 0.8;
-    }
-    75% {
-        opacity: 1;
-    }
-}
 
 @keyframes gradientShift {
     0%, 100% {
@@ -152,24 +110,7 @@ a {
         filter: brightness(1.1) saturate(1.4);
     }
 }
-
-.header.scrolled {
-    background: 
-        linear-gradient(135deg, 
-            rgba(16, 185, 129, 0.98) 0%,
-            rgba(5, 150, 105, 0.98) 20%,
-            rgba(6, 78, 59, 0.98) 40%,
-            rgba(17, 24, 39, 0.98) 60%,
-            rgba(30, 41, 59, 0.98) 80%,
-            rgba(51, 65, 85, 0.98) 100%),
-        radial-gradient(circle at 30% 40%, rgba(16, 185, 129, 0.4) 0%, transparent 50%);
-    box-shadow: 
-        0 32px 64px -12px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px) scale(1.001);
-    backdrop-filter: blur(60px) saturate(200%);
-}
+*/
 
 .navbar {
     display: grid;
@@ -188,9 +129,9 @@ a {
     /* Empty spacer for grid layout */
 }
 .navbar-logo {
-  height: 60px;
+  height: 100px;
   width: auto;
-  margin-left: -150px;
+  margin-left: 0px;
     transition: transform 0.3s ease;
 }
 .nav-company {
