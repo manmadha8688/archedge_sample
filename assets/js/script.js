@@ -1,33 +1,4 @@
-const cards = document.querySelectorAll('.explore-card');
-const grid = document.querySelector('.explore-grid');
-const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').length;
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const idx = Array.from(cards).indexOf(entry.target);
-      const row = Math.floor(idx / columns);
-      const col = idx % columns;
-      // Delay by row, then by column for staggered effect
-      setTimeout(() => {
-        entry.target.classList.add('animate');
-        // Delay image fade-in (after card animation, e.g. 900ms)
-        setTimeout(() => {
-          const img = entry.target.querySelector('img');
-          if (img) img.classList.add('show-img');
-        }, 700);
-      }, row * 600 + col * 500);
-    } else {
-      entry.target.classList.remove('animate');
-      const img = entry.target.querySelector('img');
-      if (img) img.classList.remove('show-img');
-    }
-  });
-}, {
-  threshold: 0.2
-});
-
-cards.forEach(card => observer.observe(card));
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -140,6 +111,32 @@ const imgs = document.querySelectorAll('.circle-container img');
 
   rotateImages();
   setInterval(rotateImages, 3000);
+
+  // Explore Products Animation - Smooth Fade In
+  const cards = document.querySelectorAll('.explore-card.animate-fall');
+  
+  if (cards.length > 0) {
+    const cardObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = Array.from(cards).indexOf(entry.target);
+          // Staggered delay for smooth appearance
+          setTimeout(() => {
+            entry.target.classList.add('animate');
+          }, idx * 200);
+        } else {
+          // Reset animation when card goes out of view
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    cards.forEach(card => cardObserver.observe(card));
+  }
+
     // Active navigation link on scroll
     window.addEventListener('scroll', function() {
         const sections = document.querySelectorAll('section');
@@ -192,42 +189,29 @@ const imgs = document.querySelectorAll('.circle-container img');
         });
     }, observerOptions);
 
-    // New observer for core-benefits section to toggle animation
-    const coreBenefitsSection = document.querySelector('.core-benefits');
-    const coreObserverOptions = {
-        threshold: 1.0
-    };
-
-    const coreObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            const benefitItems = coreBenefitsSection.querySelectorAll('.benefit-item');
-            if (!entry.isIntersecting) {
-                benefitItems.forEach(item => item.classList.remove('animate'));
-            }
+    // Core Benefits Animation - Animate from top and bottom
+    const benefitItems = document.querySelectorAll('.benefit-item');
+    
+    if (benefitItems.length > 0) {
+        const benefitObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const idx = Array.from(benefitItems).indexOf(entry.target);
+                    // Staggered delay for smooth appearance
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, idx * 200);
+                } else {
+                    // Reset animation when item goes out of view
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
-    }, coreObserverOptions);
 
-    if (coreBenefitsSection) {
-        coreObserver.observe(coreBenefitsSection);
-    }
-
-    // New observer for core-benefits section heading to start animation
-    const coreBenefitsHeading = document.querySelector('.core-benefits .section-title');
-    const headingObserverOptions = {
-        threshold: 0
-    };
-
-    const headingObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            const benefitItems = coreBenefitsSection.querySelectorAll('.benefit-item');
-            if (entry.isIntersecting) {
-                benefitItems.forEach(item => item.classList.add('animate'));
-            }
-        });
-    }, headingObserverOptions);
-
-    if (coreBenefitsHeading) {
-        headingObserver.observe(coreBenefitsHeading);
+        benefitItems.forEach(item => benefitObserver.observe(item));
     }
 
     // Observe elements for animation

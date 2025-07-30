@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
-    <link rel="stylesheet" href="../assets/css/navbar.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - Archedge Interiors</title>
+        <link rel="stylesheet" href="../assets/css/navbar.css" />
+        <link rel="stylesheet" href="../assets/css/pages.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         
@@ -31,7 +35,7 @@
                 <div class="nav-right">
                     <ul class="nav-menu">
                         <li class="nav-item">
-                            <a href="/" class="nav-link active">
+                            <a href="/" class="nav-link">
                                 <span class="nav-text">Home</span>
                                 <span class="nav-indicator"></span>
                             </a>
@@ -49,7 +53,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../contact/" class="nav-link">
+                            <a href="../contact/" class="nav-link active">
                                 <span class="nav-text">Contact</span>
                                 <span class="nav-indicator"></span>
                             </a>
@@ -66,18 +70,145 @@
         </div>
     </header>
 
-    <main style="display:flex; justify-content:center; align-items:center; height:60vh; font-family: Arial, sans-serif;">
-      <div style="text-align:center; border: 2px solid #3498db; padding: 40px; border-radius: 10px; box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);">
-        <h1 style="color: #3498db; font-size: 3rem; margin-bottom: 20px;">Coming Soon</h1>
-        <p style="font-size: 1.2rem; color: #555;">This page is under construction. Please check back later.</p>
-      </div>
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Get In Touch</h1>
+        <p>Ready to transform your space? Let's discuss your project and find the perfect solutions for your needs.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Contact Grid -->
+        <section class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info fade-in">
+                <h3>Connect with us</h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:archedge@gmail.com">archedge@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+919121188172">+91 91211 88172</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            H. No: 11-13-302, Ground Floor,<br>
+                            Road No - 9, Alkapuri Colony, Kothapet,<br>
+                            Saroornagar Mandal, Hyderabad,<br>
+                            Ranga Reddy Dist. 500035.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                        Sunday: 10:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form fade-in">
+                <h3>Send us a message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section fade-in">
+            <h3>Find Us</h3>
+            <div class="map-placeholder">
+                <div style="text-align: center;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: #667eea; margin-bottom: 20px;"></i>
+                    <p>Interactive map will be displayed here</p>
+                    <p style="font-size: 1rem; margin-top: 10px;">H. No: 11-13-302, Ground Floor, Road No - 9, Alkapuri Colony, Kothapet, Saroornagar Mandal, Hyderabad, Ranga Reddy Dist. 500035.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Contact Info -->
+        <section class="about-section fade-in">
+            <div class="about-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Why Choose Archedge Interiors?</h2>
+                <p style="margin-bottom: 40px;">We're here to help you create the perfect space with our expertise and premium products.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div style="text-align: center; padding: 30px; background: #f8fafc; border-radius: 15px;">
+                        <i class="fas fa-comments" style="font-size: 3rem; color: #667eea; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">Expert Consultation</h3>
+                        <p style="color: #64748b;">Get personalized advice from our experienced team to choose the perfect materials for your project.</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 30px; background: #f8fafc; border-radius: 15px;">
+                        <i class="fas fa-truck" style="font-size: 3rem; color: #667eea; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">Fast Delivery</h3>
+                        <p style="color: #64748b;">Quick and reliable delivery services to ensure your materials arrive on time for your project.</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 30px; background: #f8fafc; border-radius: 15px;">
+                        <i class="fas fa-cogs" style="font-size: 3rem; color: #667eea; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">Installation Support</h3>
+                        <p style="color: #64748b;">Professional installation services and technical support to ensure perfect results.</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 30px; background: #f8fafc; border-radius: 15px;">
+                        <i class="fas fa-heart" style="font-size: 3rem; color: #667eea; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">Customer Satisfaction</h3>
+                        <p style="color: #64748b;">Your satisfaction is our priority. We're committed to exceeding your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
      <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
           <img src="../assets/images/logo.png" alt="Archedge Logo" class="footer-logo" />
-          <p>We supply waterproof, termite-resistant, and design-rich wall and ceiling panels for modern interiors and exteriors.</p>
+          <p>Style meets strength — we supply premium raw materials for lightweight yet durable wall and ceiling panels, offering waterproof, fire-retardant, anti-bacterial, and termite-resistant properties for sleek, modern interior and exterior spaces.</p>
         </div>
 
         <div class="footer-column">
@@ -97,14 +228,19 @@
         </div>
 
         <div class="footer-column">
-          <h4>Our Specialties</h4>
+          <h4>Our Products</h4>
           <ul>
-            <li>Decorative Wall Panels</li>
-            <li>Ceiling Design Panels</li>
-            <li>Waterproof Flooring</li>
-            <li>PU Decorative Mouldings</li>
-            <li>Stone & Brick Finish Panels</li>
-            <li>Acrylic & Laminate Sheets</li>
+            <li>Poly Vinyl Chloride Ceiling and Wall Panels</li>
+            <li>PVC & WPC Panels</li>
+            <li>Charcoal Louvers</li>
+            <li>Baffle ceiling</li>
+            <li>WPC exterior Panels</li>
+            <li>Vertical Garden</li>
+            <li>Cane Webbing</li>
+            <li>PVC 3D Panels</li>
+            <li>PU Stones & Leafs</li>
+            <li>Kitchen Hardware</li>
+            <li>Plywood</li>
           </ul>
         </div>
       </div>
@@ -115,5 +251,48 @@
     </footer>
 
     <script src="../assets/js/navbar.js"></script>
+    <script>
+        // Simple fade-in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
 </body>
 </html>

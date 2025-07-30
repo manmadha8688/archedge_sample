@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cane Webbing - Archedge Interiors</title>
+        <link rel="stylesheet" href="../assets/css/navbar.css" />
+        <link rel="stylesheet" href="../assets/css/pages.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            .product-detail {
+                background: white;
+                border-radius: 20px;
+                padding: 60px;
+                margin-bottom: 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            .product-images {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+            
+            .main-image {
+                border-radius: 15px;
+                overflow: hidden;
+                height: 400px;
+            }
+            
+            .main-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .thumbnail-grid {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 20px;
+            }
+            
+            .thumbnail {
+                border-radius: 10px;
+                overflow: hidden;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            
+            .thumbnail:hover {
+                transform: scale(1.05);
+            }
+            
+            .thumbnail img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .product-info h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 20px;
+            }
+            
+            .product-description {
+                font-size: 1.1rem;
+                color: #64748b;
+                line-height: 1.8;
+                margin-bottom: 30px;
+            }
+            
+            .product-features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+            
+            .feature-item {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                background: #f8fafc;
+                border-radius: 10px;
+            }
+            
+            .feature-item i {
+                color: #667eea;
+                margin-right: 15px;
+                font-size: 1.2rem;
+            }
+            
+            .cta-section {
+                text-align: center;
+                padding: 40px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 20px;
+                color: white;
+                margin-bottom: 40px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            
+            .cta-buttons {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .cta-btn {
+                padding: 15px 30px;
+                border-radius: 25px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: transform 0.3s ease;
+            }
+            
+            .cta-btn.primary {
+                background: white;
+                color: #667eea;
+            }
+            
+            .cta-btn.secondary {
+                background: transparent;
+                color: white;
+                border: 2px solid white;
+            }
+            
+            .cta-btn:hover {
+                transform: translateY(-2px);
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="header">
+        <div class="container">
+            <nav class="navbar">
+               <a href="/"> <img src="../assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
+                
+                <a href="/"> 
+                <div class="nav-company">
+                    <div class="company-info">
+                        
+                    </div>
+                </div>
+                </a>
+                
+                <div class="nav-center">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search products..." />
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">
+                                <span class="nav-text">Home</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../about/" class="nav-link">
+                                <span class="nav-text">About</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../products/" class="nav-link active">
+                                <span class="nav-text">Products</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../contact/" class="nav-link">
+                                <span class="nav-text">Contact</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-toggle" role="button" aria-label="Toggle menu" tabindex="0">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="menu-label">Menu</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Cane Webbing</h1>
+        <p>Natural texture meets modern design with our premium cane webbing solutions</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Product Detail -->
+        <section class="product-detail fade-in">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cane Webbing" id="mainImage">
+                </div>
+                <div class="thumbnail-grid">
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cane Webbing 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cane Webbing 2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1>Cane Webbing</h1>
+                <div class="product-description">
+                    <p>Cane webbing, derived from rattan bark, offers breathability and durability, fitting seamlessly into styles from bohemian to modern with its natural texture. This versatile material is perfect for creating elegant furniture pieces, decorative panels, and unique interior accents.</p>
+                    <p>Our cane webbing is carefully sourced and processed to ensure the highest quality and consistency. Each piece showcases the natural beauty of rattan while providing the strength and flexibility needed for various applications.</p>
+                </div>
+                
+                <div class="product-features">
+                    <div class="feature-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Natural Material</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Durable & Strong</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-wind"></i>
+                        <span>Breathable</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette"></i>
+                        <span>Versatile Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section fade-in">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Get in touch with us to discuss your project and get a personalized quote</p>
+            <div class="cta-buttons">
+                <a href="../contact/" class="cta-btn primary">Get Quote</a>
+                <a href="tel:+919121188172" class="cta-btn secondary">Call Now</a>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="about-section fade-in">
+            <div class="about-content" style="text-align: center;">
+                <h2>Related Products</h2>
+                <p style="margin-bottom: 40px;">Explore our other premium materials that complement cane webbing perfectly</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div style="background: #f8fafc; border-radius: 15px; padding: 30px; text-align: center;">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Alabaster Sheets" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">Alabaster Sheets</h3>
+                        <p style="color: #64748b; margin-bottom: 20px;">Translucent beauty for elegant lighting and decorative applications.</p>
+                        <a href="alabaster-sheets.html" class="btn">Learn More</a>
+                    </div>
+                    
+                    <div style="background: #f8fafc; border-radius: 15px; padding: 30px; text-align: center;">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Louvers" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">Louvers</h3>
+                        <p style="color: #64748b; margin-bottom: 20px;">Contemporary wall solutions with elegant tactile aesthetics.</p>
+                        <a href="louvers.html" class="btn">Learn More</a>
+                    </div>
+                    
+                    <div style="background: #f8fafc; border-radius: 15px; padding: 30px; text-align: center;">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="PU Panels" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 15px; color: #1e293b;">PU Panels</h3>
+                        <p style="color: #64748b; margin-bottom: 20px;">Lightweight panels with intricate patterns for stunning designs.</p>
+                        <a href="pu-panels.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img src="../assets/images/logo.png" alt="Archedge Logo" class="footer-logo" />
+          <p>Style meets strength — we supply premium raw materials for lightweight yet durable wall and ceiling panels, offering waterproof, fire-retardant, anti-bacterial, and termite-resistant properties for sleek, modern interior and exterior spaces.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <p>Have a project in mind? Let's talk: <a href="mailto:archedge@gmail.com">archedge@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919121188172">+91 91211 88172</a></p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Visit Us</h4>
+          <p>
+            H. No: 11-13-302, Ground Floor,<br>
+            Road No - 9, Alkapuri Colony, Kothapet,<br>
+            Saroornagar Mandal, Hyderabad,<br>
+            Ranga Reddy Dist. 500035.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Products</h4>
+          <ul>
+            <li>Poly Vinyl Chloride Ceiling and Wall Panels</li>
+            <li>PVC & WPC Panels</li>
+            <li>Charcoal Louvers</li>
+            <li>Baffle ceiling</li>
+            <li>WPC exterior Panels</li>
+            <li>Vertical Garden</li>
+            <li>Cane Webbing</li>
+            <li>PVC 3D Panels</li>
+            <li>PU Stones & Leafs</li>
+            <li>Kitchen Hardware</li>
+            <li>Plywood</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2025 Archedge Interiors. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="../assets/js/navbar.js"></script>
+    <script>
+        // Simple fade-in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Image gallery functionality
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</body>
+</html> 

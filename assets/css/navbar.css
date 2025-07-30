@@ -9,15 +9,8 @@ body {
   min-height: 100vh;
   color: #222;
   font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 500;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -37,6 +30,7 @@ a {
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 
@@ -69,18 +63,18 @@ a {
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.25);
-  color: #10b981;
-  text-shadow: 0 2px 8px rgba(16, 185, 129, 0.7);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  color: #667eea;
+  text-shadow: 0 2px 8px rgba(102, 126, 234, 0.7);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
   transform: translateY(-2px);
 }
 
 .nav-link.active {
-  background: rgba(16, 185, 129, 0.3);
-  color: #10b981;
+  background: rgba(102, 126, 234, 0.3);
+  color: #667eea;
   font-weight: 700;
-  text-shadow: 0 2px 10px rgba(16, 185, 129, 0.9);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.9);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
   border-radius: 10px;
 }
 
@@ -89,7 +83,7 @@ a {
   border-radius: 20px;
   padding: 4px 16px;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
   backdrop-filter: saturate(180%) blur(20px);
   transition: all 0.3s ease;
 }
@@ -104,7 +98,7 @@ a {
   letter-spacing: 0.03em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 14px;
-  text-shadow: 0 2px 6px rgba(16, 185, 129, 0.7);
+  text-shadow: 0 2px 6px rgba(102, 126, 234, 0.7);
   transition: all 0.3s ease;
 }
 
@@ -120,9 +114,9 @@ a {
   outline: none;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 14px;
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
-  color: #10b981;
-  text-shadow: 0 2px 8px rgba(16, 185, 129, 0.9);
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.8);
+  color: #667eea;
+  text-shadow: 0 2px 8px rgba(102, 126, 234, 0.9);
 }
 
 .search-btn {
@@ -137,15 +131,16 @@ a {
 }
 
 .search-btn:hover {
-  color: #10b981;
+  color: #667eea;
   transform: scale(1.1);
 }
 
 .header.scrolled {
-    background: white;
-    box-shadow: 0 2px 16px rgba(32, 32, 154, 0.08);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(0) scale(1);
-    backdrop-filter: none;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 /* Change nav links and search colors on scrolled header */
@@ -164,21 +159,21 @@ a {
 }
 
 .header.scrolled .nav-link:hover {
-    background: linear-gradient(90deg, rgba(52, 152, 219, 0.3), rgba(16, 185, 129, 0.3));
-    color: #0b3d91;
-    text-shadow: 0 3px 12px rgba(11, 61, 145, 0.6);
-    box-shadow: 0 8px 28px rgba(11, 61, 145, 0.4);
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+    color: #667eea;
+    text-shadow: 0 3px 12px rgba(102, 126, 234, 0.6);
+    box-shadow: 0 8px 28px rgba(102, 126, 234, 0.4);
     transform: translateY(-3px) scale(1.05);
     transition: all 0.4s ease;
 }
 
 .header.scrolled .nav-link.active {
     font-weight: 700;
-    border-bottom: 3px solid #1e40af;
-    color: #1e40af;
-    text-shadow: 0 2px 10px rgba(30, 64, 175, 0.8);
-    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.4);
-    background: linear-gradient(90deg, rgba(30, 64, 175, 0.15), rgba(16, 185, 129, 0.15));
+    border-bottom: 3px solid #667eea;
+    color: #667eea;
+    text-shadow: 0 2px 10px rgba(102, 126, 234, 0.8);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
     border-radius: 10px;
 }
 
@@ -206,8 +201,8 @@ a {
 
 .header.scrolled .search-input:focus {
     background: #ffffff;
-    border-color: #3182ce;
-    box-shadow: 0 0 12px rgba(49, 130, 206, 0.8);
+    border-color: #667eea;
+    box-shadow: 0 0 12px rgba(102, 126, 234, 0.8);
     outline: none;
 }
 
@@ -363,8 +358,8 @@ a {
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.8),
         0 1px 2px rgba(0, 0, 0, 0.6),
-        0 0 20px rgba(16, 185, 129, 0.4),
-        0 0 40px rgba(59, 130, 246, 0.2);
+        0 0 20px rgba(102, 126, 234, 0.4),
+        0 0 40px rgba(118, 75, 162, 0.2);
     letter-spacing: -0.5px;
     position: relative;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -381,8 +376,8 @@ a {
     text-shadow: 
         0 3px 6px rgba(0, 0, 0, 0.9),
         0 1px 3px rgba(0, 0, 0, 0.7),
-        0 0 25px rgba(16, 185, 129, 0.6),
-        0 0 40px rgba(59, 130, 246, 0.4),
+        0 0 25px rgba(102, 126, 234, 0.6),
+        0 0 40px rgba(118, 75, 162, 0.4),
         0 0 60px rgba(139, 92, 246, 0.3);
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
 }
@@ -399,7 +394,7 @@ a {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-shadow: 
         0 1px 3px rgba(0, 0, 0, 0.6),
-        0 0 10px rgba(16, 185, 129, 0.3);
+        0 0 10px rgba(102, 126, 234, 0.3);
     text-transform: uppercase;
     font-variant: small-caps;
     white-space: nowrap;
@@ -413,8 +408,8 @@ a {
     transform: translateY(-1px);
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.7),
-        0 0 15px rgba(16, 185, 129, 0.5),
-        0 0 25px rgba(59, 130, 246, 0.3);
+        0 0 15px rgba(102, 126, 234, 0.5),
+        0 0 25px rgba(118, 75, 162, 0.3);
     letter-spacing: 0.9px;
 }
 
@@ -497,7 +492,7 @@ a {
 }
 
 .search-btn:hover {
-    color: #10b981;
+    color: #667eea;
     transform: scale(1.1);
 }
 
@@ -580,7 +575,7 @@ a {
     transform: translateY(-2px);
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.5),
-        0 0 10px rgba(16, 185, 129, 0.3);
+        0 0 10px rgba(102, 126, 234, 0.3);
     border-radius: 12px;
 }
 
@@ -590,11 +585,11 @@ a {
 
 .nav-link.active {
     color: #ffffff;
-    background: rgba(16, 185, 129, 0.2);
+    background: rgba(102, 126, 234, 0.2);
     font-weight: 600;
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.5),
-        0 0 12px rgba(16, 185, 129, 0.4);
+        0 0 12px rgba(102, 126, 234, 0.4);
     border-radius: 12px;
 }
 
