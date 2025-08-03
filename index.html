@@ -19,7 +19,7 @@
             <nav class="navbar">
                <a href="/"> <img src="assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
                 
-                <a href="/"> 
+                <a href="./"> 
                 <div class="nav-company">
                     <div class="company-info">
                         
@@ -77,10 +77,11 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-        <section class="hero">
-  <div class="hero-image-bg"><img src="assets/images/cover1.jpeg" alt="cover image" /></div>
-  <div class="hero-content">
-    <h1 class="hero-title">
+       <div class="hero-container">
+  <div class="slide active" style="background-image: url('assets/images/elevate1.webp');">
+    <div class="overlay"></div>
+    <div class="slide-content">
+      <h1>
     Elevate your spaces inside and out with our expertly crafted products—where quality meets timeless aesthetic appeal
    </h1>
     <p>
@@ -89,16 +90,46 @@
     <a href="products/" class="btn btn-primary">
       Explore Products
     </a>
+      <button class="btn">Contact Us</button>
+    </div>
   </div>
+  <div class="slide" style="background-image: url('assets/images/cover1.jpeg');">
+    <div class="overlay"></div>
+    <div class="slide-content">
+      <h1>Exterior Wall Solutions</h1>
+      <p>Durable & weatherproof designs that enhance outdoor aesthetics.</p>
+      <button class="btn">Explore Exterior</button>
+      <button class="btn">Get Quote</button>
+    </div>
+  </div>
+  <div class="slide" style="background-image: url('assets/images/elevate1.webp');">
+    <div class="overlay"></div>
+    <div class="slide-content">
+      <h1>Modern Hybrid Styles</h1>
+      <p>Fusing interior and exterior beauty for a seamless experience.</p>
+      <button class="btn">Discover More</button>
+      <button class="btn">Free Sample</button>
+    </div>
+  </div>
+
+  <div class="dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
 </section>
 
         <!-- Featured Products Section -->
 <section class="best-sellers">
   <div class="container">
-    <h2 class="section-title">Top-Selling Decorative Wall Panels in Hyderabad</h2>
-    <p class="section-description">
-      Discover our best-selling wall panel designs — waterproof, termite-resistant, and perfect for modern interiors and exteriors.
-    </p>
+    <h2 class="section-title fade-observe">
+  Top-Selling Decorative Wall Panels in Hyderabad
+</h2>
+<p class="section-description fade-observe">
+  Discover our best-selling wall panel designs — waterproof, termite-resistant, and perfect for modern interiors and exteriors.
+</p>
+
     <div class="products-grid">
       <div class="product-card">
         <div class="product-image">
@@ -172,8 +203,8 @@
 
 <section class="explore-products">
   <div class="container">
-    <h2 class="section-title">Explore Our Premium Product Range</h2>
-    <p class="section-description">
+    <h2 class="section-title fade-observe1">Explore Our Premium Product Range</h2>
+    <p class="section-description fade-observe1">
       Discover elegant surface designs that bring interiors to life — from high-gloss panels to natural textures.
     </p>
 
@@ -227,12 +258,89 @@
             </div>
 
             <div class="text-section">
-                <h2>Elevate Your Spaces with Archedge</h2>
+                <h2 class="fade-observe">Elevate Your Spaces with Archedge</h2>
 <p>
   Archedge is Hyderabad’s trusted supplier of decorative wall panels, ceiling systems, and waterproof flooring. We deliver innovative, durable, and termite-resistant solutions for homes and businesses. Our expert team combines design aesthetics with long-lasting performance to transform interiors and exteriors across Telangana.
 </p>
             </div>
         </section>
+        
+<section class="testimonial-slider">
+<div class="container">
+  <h2 class="section-title fade-observe1">What Our Clients Say</h2>
+    <p class="section-description fade-observe1">
+    Real stories from real customers who love our products.
+  </p>
+</div>
+  <div class="image-side" id="imageDisplay"></div>
+
+  <div class="content-side">
+    <img id="profileImg" class="profile-img" src="" alt="User">
+    <div class="username" id="username">Name</div>
+
+    <div class="typing-container">
+      <span id="typingText"></span><span class="cursor"></span>
+    </div>
+
+    <div class="arrow-buttons">
+  <button class="arrow-btn prev" onclick="prevSlide()">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+      <path d="M15 6l-6 6 6 6"/>
+    </svg>
+  </button>
+  <button class="arrow-btn next" onclick="nextSlide()">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+      <path d="M9 6l6 6-6 6"/>
+    </svg>
+  </button>
+</div>
+
+  </div>
+</section>
+
+<section class="faq-section">
+    <h2 class="faq-title fade-observe">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Are your panels waterproof?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        Yes, our panels are 99.9% waterproof and mold-resistant — perfect for kitchens, bathrooms, and high-moisture areas.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I install panels myself?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        Most products are DIY-friendly with peel-and-stick options. However, for best finishes, we recommend expert installation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What textures and finishes do you offer?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        We offer high-gloss, matte, woodgrain, marble, stone, and custom decorative textures that suit modern and classic interiors.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you provide installation services?
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="faq-answer">
+        Yes! We provide full-service installation across major cities, ensuring quality finish and zero hassle for our clients.
+      </div>
+    </div>
+  </section>
     </main>
 
     <!-- Footer -->

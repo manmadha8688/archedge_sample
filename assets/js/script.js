@@ -1,5 +1,100 @@
+document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        item.classList.toggle('active');
+      });
+    });
+const testimonials = [
+    {
+      name: "Priya D.",
+      text: "These panels changed the whole vibe of our restaurant. They’re stunning, durable, and super easy to clean — exactly what we needed!",
+      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      bg: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      name: "Manoj K.",
+      text: "From design to finish, the product speaks class. Our hall looks premium, and clients notice it instantly!",
+      image: "https://randomuser.me/api/portraits/men/5.jpg",
+      bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      name: "Sneha G.",
+      text: "Great texture, solid material, and exceptional support team. Highly recommended for interior designers and architects.",
+      image: "https://randomuser.me/api/portraits/women/6.jpg",
+      bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    }
+  ];
 
-document.addEventListener('DOMContentLoaded', function() {
+  let current = 0;
+  let typingTimeout;
+
+  function typeText(text, element) {
+    let i = 0;
+    element.textContent = '';
+    clearTimeout(typingTimeout);
+
+    function typeChar() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i++);
+        const delay = Math.random() * (60 - 30) + 30;
+        typingTimeout = setTimeout(typeChar, delay);
+      }
+    }
+
+    typeChar();
+  }
+
+  function showTestimonial(index) {
+    const { name, text, image, bg } = testimonials[index];
+    document.getElementById("username").textContent = name;
+    document.getElementById("profileImg").src = image;
+    document.getElementById("imageDisplay").style.backgroundImage = `url('${bg}')`;
+
+    const textEl = document.getElementById("typingText");
+    typeText(text, textEl);
+  }
+
+  function nextSlide() {
+    current = (current + 1) % testimonials.length;
+    showTestimonial(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(current);
+  }
+
+  setInterval(nextSlide, 9000);
+  showTestimonial(current);
+
+document.addEventListener('DOMContentLoaded', function() { 
+
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    slides[i].classList.add('active');
+    dots[i].classList.add('active');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }
+
+  setInterval(nextSlide, 5000);
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+
+
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const header = document.querySelector('.header');
@@ -459,3 +554,18 @@ const optimizedScrollHandler = debounce(function() {
 }, 10);
 
 window.addEventListener('scroll', optimizedScrollHandler);
+
+ const sub_observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); // Reset when out of view
+      }
+    });
+  }, {
+    threshold: 0.1,
+  });
+
+  document.querySelectorAll('.fade-observe').forEach(el => sub_observer.observe(el));
+  document.querySelectorAll('.fade-observe1').forEach(el => sub_observer.observe(el));
