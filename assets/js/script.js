@@ -539,6 +539,7 @@ const imgs = document.querySelectorAll('.circle-container img');
     `;
     
     document.body.appendChild(backToTopButton);
+
     
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
