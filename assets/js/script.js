@@ -1,9 +1,22 @@
-document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        item.classList.toggle('active');
-      });
-    });
+let currentSlide = 0;
+  const itemsPerSlide = 4;
+  const track = document.getElementById('carouselTrack');
+  const totalItems = document.querySelectorAll('.carousel-item').length;
+  const maxSlide = Math.ceil(totalItems / itemsPerSlide) - 1;
+
+  function moveSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = maxSlide;
+    if (currentSlide > maxSlide) currentSlide = 0;
+    const slideWidth = track.offsetWidth / itemsPerSlide;
+    track.style.transform = `translateX(-${currentSlide * slideWidth * itemsPerSlide}px)`;
+  }
+
+  // Auto Slide
+  setInterval(() => {
+    moveSlide(1);
+  }, 4000);
+
 const testimonials = [
     {
       name: "Priya D.",
@@ -207,30 +220,6 @@ const imgs = document.querySelectorAll('.circle-container img');
   rotateImages();
   setInterval(rotateImages, 3000);
 
-  // Explore Products Animation - Smooth Fade In
-  const cards = document.querySelectorAll('.explore-card.animate-fall');
-  
-  if (cards.length > 0) {
-    const cardObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const idx = Array.from(cards).indexOf(entry.target);
-          // Staggered delay for smooth appearance
-          setTimeout(() => {
-            entry.target.classList.add('animate');
-          }, idx * 200);
-        } else {
-          // Reset animation when card goes out of view
-          entry.target.classList.remove('animate');
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    cards.forEach(card => cardObserver.observe(card));
-  }
 
     // Active navigation link on scroll
     window.addEventListener('scroll', function() {

@@ -10,7 +10,7 @@
         .hero-section {
             position: relative;
             height: 70vh;
-            background: url('../images/elevate1.webp');
+            background: url('../images/about/cover.jpg');
             background-size: cover;
             background-position: center;
             display: flex;

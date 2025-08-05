@@ -413,14 +413,15 @@ body{
 }
 
 .benefit-item p {
-  color: #4a5568;
+  color: #637698;
   line-height: 1.7;
-  font-weight: 600;
+  font-weight: 800;
+  text-align: justify;
 }
 
 /* Enhanced Explore Products Section */
 .explore-products {
-  padding: 100px 20px;
+  padding: 100px ;
   background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
   position: relative;
   overflow: hidden;
@@ -436,91 +437,62 @@ body{
   opacity: 0.3;
 }
 
-.explore-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  padding: 0 10px;
-  position: relative;
-  z-index: 2;
-}
+.carousel-section {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
 
-.explore-card {
-  background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
-  border-radius: 25px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
 
-.explore-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
+    .carousel-item {
+      flex: 0 0 25%;
+      box-sizing: border-box;
+      padding: 0 10px;
+      text-align: center;
+    }
 
-.explore-card:hover::before {
-  transform: scaleX(1);
-}
+    .carousel-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-.explore-card:hover {
-  
-  transform: translateY(-25px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgba(102, 126, 234, 0.6);
-  box-shadow: 
-    0 25px 50px rgba(0, 0, 0, 0.15),
-    0 0 30px rgba(102, 126, 234, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  animation: cardPulse 2s ease-in-out infinite;
-}
+    .carousel-item h4 {
+      margin: 10px 0 5px;
+      font-size: 1rem;
+    }
 
-.explore-card.animate-fall.animate {
-  opacity: 1;
-  transform: translateY(20px);
-}
+    .carousel-item p {
+      font-size: 0.85rem;
+      color: #555;
+    }
 
-.explore-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  filter: brightness(0.9) contrast(1.1);
-}
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 1;
+    }
 
-.explore-card:hover img {
-  transform: scale(1.2);
-}
+    .carousel-btn.left {
+      left: 10px;
+    }
 
-.explore-card h3 {
-  font-size: 1.5rem;
-  margin: 25px 0 15px;
-  font-weight: 700;
-  color: #3B82F6; /* Royal Blue */
-}
-
-.explore-card p {
-  color: #4a5568;
-  font-size: 1.1rem;
-  padding: 0 25px 30px;
-  line-height: 1.6;
-  font-weight: 600;
-}
+    .carousel-btn.right {
+      right: 10px;
+    }
 
 .explore-cta {
   margin-top: 60px;
@@ -612,9 +584,10 @@ body{
   font-size: 1.2rem;
   color: #f0f8ff;
   line-height: 1.8;
-  margin-right: 20px;
+  margin-right: 50px;
   font-weight: 400;
   text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  text-align: justify;
 }
 
 .elevate-interior .circle-container {
@@ -696,7 +669,7 @@ body{
   .section-title {
     font-size: 2.5rem;
   }
-  .product-card, .explore-card {
+  .product-card {
     margin: 0 10px;
   }
   .footer-container {
