@@ -28,12 +28,7 @@
                 </a>
                 
                 <div class="nav-center">
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search products..." />
-                        <button class="search-btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+                    <!-- Search bar removed -->
                 </div>
                 
                 <div class="nav-right">
@@ -62,10 +57,22 @@
         <li><a href="products/pare/" class="dropdown-link">Pare India</a></li>
         <li><a href="products/vox/" class="dropdown-link">Vox India</a></li>
     </ul>
-</li> 
+</li>
+                        <li class="nav-item">
+                            <a href="categories/" class="nav-link">
+                                <span class="nav-text">Categories</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="careers/" class="nav-link">
+                                <span class="nav-text">Careers</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="contact/" class="nav-link">
-                                <span class="nav-text">Contact</span>
+                                <span class="nav-text">Contact Us</span>
                                 <span class="nav-indicator"></span>
                             </a>
                         </li>
@@ -84,57 +91,86 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-       <div class="hero-container">
-  <div class="slide active" style="background-image: url('assets/images/homepage/cover3.jpg');">
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <h1>
-    Elevate your spaces inside and out with our expertly crafted products—where quality meets timeless aesthetic appeal
-   </h1>
-    <p>
-      Great finishes start with the right foundation — Archedge delivers high-grade raw materials at unmatched prices, so your work always stands out.
-    </p>
-    <a href="products/" class="btn btn-primary">
-      Explore Products
-    </a>
-      <button class="btn">Contact Us</button>
+       <div class="hero-section">
+  <div class="hero-background">
+    <div class="hero-slide active zoom-in" data-bg="assets/images/homepage/cover3.jpg"></div>
+    <div class="hero-slide zoom-out" data-bg="assets/images/homepage/cover1.webp"></div>
+    <div class="hero-slide zoom-in" data-bg="assets/images/homepage/cover2.jpg"></div>
+    <div class="hero-slide zoom-out" data-bg="assets/images/homepage/cover3.jpg"></div>
+  </div>
+  
+  <div class="hero-overlay"></div>
+  
+  <div class="hero-content">
+    <!-- Slide 1 Content -->
+    <div class="hero-text active" data-slide="0">
+      <h1 class="hero-main-title">
+        <span class="title-line">Transform Your Space</span>
+        <span class="title-line">With Premium</span>
+        <span class="title-line highlight">Decorative Panels</span>
+      </h1>
+      
+      <p class="hero-description">
+        Discover our extensive range of waterproof, termite-resistant wall panels 
+        that combine exceptional quality with modern design for every interior need.
+      </p>
+    </div>
+    
+    <!-- Slide 2 Content -->
+    <div class="hero-text" data-slide="1">
+      <h1 class="hero-main-title">
+        <span class="title-line">Crafting Stunning</span>
+        <span class="title-line">Interiors With</span>
+        <span class="title-line highlight">Precision Design</span>
+      </h1>
+      
+      <p class="hero-description">
+        From panels to finishes, Archedge empowers every project with exceptional 
+        materials and unbeatable value for a flawless, professional outcome.
+      </p>
+    </div>
+    
+    <!-- Slide 3 Content -->
+    <div class="hero-text" data-slide="2">
+      <h1 class="hero-main-title">
+        <span class="title-line">Elevate Every Room</span>
+        <span class="title-line">With Waterproof</span>
+        <span class="title-line highlight">Wall Solutions</span>
+      </h1>
+      
+      <p class="hero-description">
+        Experience premium wall panels designed for modern living - completely 
+        waterproof, durable, and perfect for kitchens, bathrooms, and beyond.
+      </p>
+    </div>
+    
+    <!-- Slide 4 Content -->
+    <div class="hero-text" data-slide="3">
+      <h1 class="hero-main-title">
+        <span class="title-line">Innovation Meets</span>
+        <span class="title-line">Exceptional</span>
+        <span class="title-line highlight">Quality Standards</span>
+      </h1>
+      
+      <p class="hero-description">
+        Transform your vision into reality with our premium decorative solutions 
+        that blend cutting-edge aesthetics with unmatched durability.
+      </p>
     </div>
   </div>
-  <div class="slide" style="background-image: url('assets/images/homepage/cover1.webp');">
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <h1>
-Transform interiors and exteriors with elegance — premium craftsmanship that defines lasting beauty.
-</h1>
-<p>
-Archedge sources top-tier materials to ensure every design begins with strength and style — at prices that give you the edge.
-</p>
-    <a href="products/" class="btn btn-primary">
-      Explore Products
-    </a>
-      <button class="btn">Get Quote</button>
-    </div>
+  
+  <div class="hero-indicators">
+    <button class="indicator active" data-slide="0"></button>
+    <button class="indicator" data-slide="1"></button>
+    <button class="indicator" data-slide="2"></button>
+    <button class="indicator" data-slide="3"></button>
   </div>
-  <div class="slide" style="background-image: url('assets/images/homepage/cover2.jpg');">
-    <div class="overlay"></div>
-    <div class="slide-content">
-     <h1>
-Crafting stunning spaces with precision — where design vision meets superior product quality.
-</h1>
-<p>
-From panels to finishes, Archedge empowers every project with exceptional materials and unbeatable value for a flawless outcome.
-</p>    
-<a href="products/" class="btn btn-primary">
-      Explore Products
-    </a>
-      <button class="btn">Free Sample</button>
+  
+  <div class="hero-scroll-indicator">
+    <div class="scroll-text">Scroll Down</div>
+    <div class="scroll-arrow">
+      <i class="fas fa-chevron-down"></i>
     </div>
-  </div>
-
-  <div class="dots">
-    <div class="dot active"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
   </div>
 </div>
 </section>

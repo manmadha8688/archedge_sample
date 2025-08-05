@@ -82,31 +82,63 @@ const testimonials = [
 
 document.addEventListener('DOMContentLoaded', function() { 
 
-  const slides = document.querySelectorAll('.slide');
-  const dots = document.querySelectorAll('.dot');
-  let index = 0;
+  // Hero Section Management
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroTexts = document.querySelectorAll('.hero-text');
+  const indicators = document.querySelectorAll('.indicator');
+  let currentSlideIndex = 0;
+  let isTransitioning = false;
 
-  function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    slides[i].classList.add('active');
-    dots[i].classList.add('active');
-  }
-
-  function nextSlide() {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  }
-
-  setInterval(nextSlide, 5000);
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      index = i;
-      showSlide(index);
-    });
+  // Set background images for slides
+  heroSlides.forEach(slide => {
+    const bgImage = slide.getAttribute('data-bg');
+    if (bgImage) {
+      slide.style.backgroundImage = `url('${bgImage}')`;
+    }
   });
 
+  function showHeroSlide(index) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    
+    // Remove active class from all slides, texts, and indicators
+    heroSlides.forEach(slide => slide.classList.remove('active'));
+    heroTexts.forEach(text => text.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Add active class to current slide, text, and indicator
+    heroSlides[index].classList.add('active');
+    heroTexts[index].classList.add('active');
+    indicators[index].classList.add('active');
+    
+    // Allow next transition after fade completes
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 1200);
+  }
+
+  function nextHeroSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % heroSlides.length;
+    showHeroSlide(currentSlideIndex);
+  }
+
+  // Auto-advance slides every 6 seconds (longer to appreciate zoom effect)
+  setInterval(nextHeroSlide, 4000);
+
+  // Indicator click handlers
+  indicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', () => {
+      if (!isTransitioning && i !== currentSlideIndex) {
+        currentSlideIndex = i;
+        showHeroSlide(currentSlideIndex);
+      }
+    });
+  });
+  
+  // Initialize first slide
+  if (heroSlides.length > 0) {
+    showHeroSlide(0);
+  }
 
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
