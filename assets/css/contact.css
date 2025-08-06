@@ -10,7 +10,7 @@ body {
 .hero-section {
     position: relative;
     height: 70vh;
-    background:  url('../images/contact/cover.webp');
+    background:  url('../images/contact/cover.avif') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
     display: flex;
