@@ -22,19 +22,19 @@ const testimonials = [
       name: "Priya D.",
       text: "These panels changed the whole vibe of our restaurant. They’re stunning, durable, and super easy to clean — exactly what we needed!",
       image: "https://randomuser.me/api/portraits/women/4.jpg",
-      bg: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+      bg: "./assets/images/homepage/review1.jpg"
     },
     {
       name: "Manoj K.",
       text: "From design to finish, the product speaks class. Our hall looks premium, and clients notice it instantly!",
       image: "https://randomuser.me/api/portraits/men/5.jpg",
-      bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+      bg: "./assets/images/homepage/review2.jpg"
     },
     {
       name: "Sneha G.",
       text: "Great texture, solid material, and exceptional support team. Highly recommended for interior designers and architects.",
       image: "https://randomuser.me/api/portraits/women/6.jpg",
-      bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+      bg: "./assets/images/homepage/review3.jpg"
     }
   ];
 
@@ -557,7 +557,34 @@ const imgs = document.querySelectorAll('.circle-container img');
     });
 });
 
-// Additional utility functions
+  // FAQ Toggle Functionality
+  function initFaqToggle() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function() {
+        const faqItem = this.closest('.faq-item');
+        
+        // Close other open FAQ items (optional - remove if you want multiple open)
+        const allFaqItems = document.querySelectorAll('.faq-item');
+        allFaqItems.forEach(item => {
+          if (item !== faqItem && item.classList.contains('active')) {
+            item.classList.remove('active');
+          }
+        });
+        
+        // Toggle current FAQ item
+        faqItem.classList.toggle('active');
+      });
+    });
+  }
+
+  // Initialize FAQ functionality when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    initFaqToggle();
+  });
+
+  // Additional utility functions
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
