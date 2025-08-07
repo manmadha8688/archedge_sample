@@ -14,7 +14,7 @@ body {
 /* ============================= */
 .hero-section {
     position: relative;
-    height: 70vh;
+    height: 90vh;
     background: url('../images/products/cover.avif') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
@@ -49,6 +49,27 @@ body {
   transform: translateX(30px) scale(0.8);
   display: inline-block;
   animation: beatIn 0.6s forwards;
+ 
+}
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: blue;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
 }
 
 @keyframes beatIn {
@@ -88,6 +109,7 @@ body {
     background-clip: text;
     animation: fadeInUp 1s ease-out forwards, glow 2s infinite alternate;
     opacity: 0.9;
+    justify-content: center;
 }
 
 .hero-subtitle, .hero-title {

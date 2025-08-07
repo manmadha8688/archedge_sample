@@ -808,7 +808,7 @@ body{
 
 .circle-container img {
   position: absolute;
-  width: 220px;
+  width: 180px;
   height: auto;
   border-radius: 25px;
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);

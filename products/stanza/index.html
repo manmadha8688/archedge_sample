@@ -6,14 +6,21 @@
   <title>Stanza Decor Products - Designer Wall Panels & Fluted Designs | Archedge Hyderabad</title>
   <meta name="description" content="Premium Stanza Decor wall panels, fluted designs, and interior finishes available in Hyderabad. Waterproof decorative panels for modern interiors. Authorized supplier & distributor of Stanza Decor products.">
   <link rel="stylesheet" href="../../assets/css/navbar.css" />
-  <link rel="stylesheet" href="../../assets/css/products.css" />
+  <link rel="stylesheet" href="../../assets/css/brand-products.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<style>
+  #heroHeader,
+#heroSection {
+  transition: transform 0.5s ease-in-out;
+}
+
+</style>
 <body>
 
 <!-- Header -->
-<header class="header">
+<header id="heroHeader" class="header">
         <div class="container">
             <nav class="navbar">
                <a href="../../"> <img src="../../assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
@@ -145,19 +152,17 @@
 
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" id="heroSection">
   <div class="hero-content">
-    <h1 class="hero-subtitle">Stanza Decor Products - Designer Interior Solutions</h1>
-    <p class="hero-subtitle">Premium supplier of Stanza Decor's innovative wall panels, fluted designs, and decorative finishes in Hyderabad. Transform your spaces with contemporary design solutions that combine style with functionality.</p>
+  <h1 class="hero-title" data-text="Stanza Decor Products">Stanza Decor Products </h1>
+    <p class="hero-subtitle">Premium supplier of Stanza Decor's innovative wall panels, fluted designs, and decorative finishes in Hyderabad. </p>
   </div>
 </section>
 
+
 <main class="main-content">
-  <!-- Introduction -->
-  <section class="products-hero">
-    <h2>Stanza Decor Products - Premium Interior Solutions</h2>
-    <p>Archedge supplies Stanza Decor's comprehensive range of designer wall panels, fluted designs, and premium interior finishes. These innovative products offer exceptional aesthetic appeal, durability, and easy maintenance - perfect for residential and commercial projects across Hyderabad.</p>
-  </section>
+  
+
 
   <!-- Product Grid -->
   <section class="products-grid" id="products">
@@ -244,9 +249,9 @@
   <div class="footer-bottom">
     &copy; 2025 Archedge Interiors. All Rights Reserved.
   </div>
-</footer>
 
-<script src="../../assets/js/script.js"></script>
+</footer>
+<script src="../../assets/js/navbar.js"></script>
 <script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -265,6 +270,42 @@
     '.products-hero, .feature-card, .about-section, .product-category-content, .hero-subtitle'
   );
   elements.forEach(el => observer.observe(el));
+
+   document.addEventListener("DOMContentLoaded", () => {
+    const title = document.querySelector(".hero-title");
+    const text = title.getAttribute("data-text");
+    title.innerHTML = ""; // Clear original
+
+    [...text].forEach((char, i) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.animationDelay = `${i * 0.05}s`;
+      title.appendChild(span);
+    });
+  });
+
+   document.querySelector('.scroll-down-indicator')?.addEventListener('click', () => {
+    const nextSection = document.querySelector('.products-section'); // change if needed
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+   const header = document.getElementById('heroHeader');
+const heroSection = document.getElementById('heroSection');
+
+setInterval(() => {
+  if (window.scrollY <= 250) {
+    header.style.transform = 'translateY(-30px)';
+    heroSection.style.transform = 'translateY(-30px)';
+
+    setTimeout(() => {
+      header.style.transform = 'translateY(0)';
+      heroSection.style.transform = 'translateY(0)';
+    }, 700);
+  }
+}, 3000);
+
 </script>
 </body>
 </html>
