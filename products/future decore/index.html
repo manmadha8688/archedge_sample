@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Star Dec Products - Premium 3D Wall Panels & PU Stones | Archedge Hyderabad</title>
-  <meta name="description" content="Discover Star Dec's premium collection of 3D decorative wall panels, PU stones, and artistic accents. Waterproof, termite-resistant panels perfect for modern interiors in Hyderabad. Supplier & distributor of quality Star Dec products.">
+  <title>Stanza Decor Products - Designer Wall Panels & Fluted Designs | Archedge Hyderabad</title>
+  <meta name="description" content="Premium Stanza Decor wall panels, fluted designs, and interior finishes available in Hyderabad. Waterproof decorative panels for modern interiors. Authorized supplier & distributor of Stanza Decor products.">
   <link rel="stylesheet" href="../../assets/css/navbar.css" />
-  <link rel="stylesheet" href="../../assets/css/products.css" />
+  <link rel="stylesheet" href="../../assets/css/brand-products.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<!-- Scroll Progress Indicator -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- Header -->
-<header class="header">
+<header id="heroHeader" class="header">
         <div class="container">
             <nav class="navbar">
                <a href="../../"> <img src="../../assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
@@ -51,65 +55,65 @@
     </a>
     <div class="brands-dropdown">
         <div class="brands-row">
-            <a href="../" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="/assets/images/elevate1.webp" alt="All Products" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View All Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">All Products</div>
-            </a>
-            
-            <a href="../stardec/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=100&fit=crop&crop=center" alt="Star Dec Products" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Star Dec Products</div>
-            </a>
-            
-            <a href="../stanza/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=150&h=100&fit=crop&crop=center" alt="Stanza Decor" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Stanza Decor</div>
-            </a>
-            
-            <a href="../future decore/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=150&h=100&fit=crop&crop=center" alt="Future Decore Industries" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Future Decore Industries</div>
-            </a>
-            
-            <a href="../pare/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=150&h=100&fit=crop&crop=center" alt="Pare India" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Pare India</div>
-            </a>
-            
-            <a href="../vox/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=100&fit=crop&crop=center" alt="Vox India" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Vox India</div>
-            </a>
+    <a href="../" class="brand-item">
+        <div class="brand-image-container">
+            <img src="/assets/images/elevate1.webp" alt="All Products" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View All Products</span>
+            </div>
+        </div>
+        <div class="brand-name">All Products</div>
+    </a>
+    
+    <a href="../stardec/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=100&fit=crop&crop=center" alt="Star Dec Products" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Star Dec Products</div>
+    </a>
+    
+    <a href="../stanza/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=150&h=100&fit=crop&crop=center" alt="Stanza Decor" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Stanza Decor</div>
+    </a>
+    
+    <a href="../future decore/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=150&h=100&fit=crop&crop=center" alt="Future Decore Industries" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Future Decore Industries</div>
+    </a>
+    
+    <a href="../pare/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=150&h=100&fit=crop&crop=center" alt="Pare India" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Pare India</div>
+    </a>
+    
+    <a href="../vox/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=100&fit=crop&crop=center" alt="Vox India" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Vox India</div>
+    </a>
         </div>
     </div>
 </li>
@@ -143,84 +147,222 @@
         </div>
     </header>
 
+
 <!-- Hero Section -->
-<section class="head-section"> 
-  <div class="hero-content">
-    <h1 class="hero-subtitle">Star Dec Products - Premium Decorative Solutions</h1>
-    <p class="hero-subtitle">Leading supplier of Star Dec's innovative 3D wall panels, PU stones, and decorative accents in Hyderabad. Transform your interiors with waterproof, termite-resistant, and lightweight decorative solutions.</p>
+<section class="hero-section" id="heroSection">
+  <!-- Parallax Background Layers -->
+  <div class="parallax-container">
+    <div class="parallax-layer layer-1" data-speed="0.2"></div>
+    <div class="parallax-layer layer-2" data-speed="0.5"></div>
+    <div class="parallax-layer layer-3" data-speed="0.8"></div>
   </div>
+  
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <div class="float-element float-1" data-speed="0.3"></div>
+    <div class="float-element float-2" data-speed="0.6"></div>
+    <div class="float-element float-3" data-speed="0.4"></div>
+  </div>
+  
+  <!-- Hero Content with Parallax -->
+  <div class="hero-content" data-speed="0.1">
+    <h1 class="hero-title" data-text="Future     Decore      Products">
+      Future Decore Products
+    </h1>
+   
+
+  </div>
+  
+ 
 </section>
 
+
 <main class="main-content">
-  <!-- Introduction -->
-  <section class="products-hero">
-    <h2>Star Dec Products - Premium Interior Solutions</h2>
-    <p>Archedge supplies Star Dec's innovative range of 3D decorative wall panels, polyurethane stones, and artistic accent pieces. These premium products offer exceptional durability, waterproof properties, and termite resistance - ideal for residential and commercial interior projects across Hyderabad.</p>
-  </section>
+  
 
-  <!-- Star Dec Product Grid -->
+
+  <!-- Product Grid -->
   <section class="products-grid" id="products">
-    <!-- PVC 3D Panels -->
+    <!-- Decorative Wall Panels -->
     <div class="product-category">
       <div class="product-image">
-        <img src="../../assets/images/elevate1.webp" alt="Star Dec PVC 3D Wall Panels - Waterproof Decorative Panels">
+        <img src="../../assets/images/brands/Future DECOR/BREAD CRUMB/bread_crumb1.png" alt="Stanza Decor Decorative Wall Panels - Designer Interior Panels">
       </div>
       <div class="product-category-content">
-        <h3>Star Dec 3D Wall Panels</h3>
-        <p class="brand-name">Brand: Star Dec Products</p>
-        <p>Premium 3D decorative wall panels crafted from high-quality PVC. These lightweight, waterproof panels add stunning dimension and texture to interior walls. Perfect for feature walls, restaurants, offices, and modern homes in Hyderabad.</p>
-        <a href="pvc-3d-panels.html" class="btn">Explore →</a>
+        <h3>Bread Crumb</h3>
+  <p>Elegant and unique wall panels that redefine modern interior aesthetics.</p>
+        <a href="#" class="btn">Explore →</a>
       </div>
     </div>
 
-    <!-- PU Stones -->
     <div class="product-category">
       <div class="product-image">
-        <img src="../../assets/images/cover1.jpeg" alt="Star Dec PU Stone Panels - Natural Stone Look Decorative Panels">
+        <img src="../../assets/images/brands/Future DECOR/TIMELESS CLOCK/timeless_clock1.png" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
       </div>
       <div class="product-category-content">
-        <h3>Star Dec PU Stone Panels</h3>
-        <p class="brand-name">Brand: Star Dec Products</p>
-        <p>Authentic-looking polyurethane stone panels that replicate natural stone textures without the weight. These weather-resistant, termite-proof panels are perfect for both interior and exterior applications. Ideal for accent walls, facades, and decorative features.</p>
-        <a href="pu-stones.html" class="btn">Explore →</a>
+<h3>Timeless Clock</h3>
+<p>Classic finishes blending function and style in perfect harmony.</p>
+<a href="#" class="btn">Explore →</a>
       </div>
+    <!-- Fluted Panels -->
+    
     </div>
-
-    <!-- Star Decor Accents -->
+ <!-- Fluted Panels -->
     <div class="product-category">
       <div class="product-image">
-        <img src="../../assets/images/logo.png" alt="Star Dec Decorative Accents - Artistic Wall Moldings and Panels">
+        <img src="../../assets/images/brands/Future DECOR//FEATHER FORGE/feather_forge3.jpg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
       </div>
       <div class="product-category-content">
-        <h3>Star Dec Decorative Accents</h3>
-        <p class="brand-name">Brand: Star Dec Products</p>
-        <p>Exquisite decorative accent pieces including carved panels, artistic moldings, and signature motifs. These premium accents enhance walls, ceilings, and furniture with sophisticated design elements. Perfect for luxury interiors and commercial spaces.</p>
-        <a href="star-dec-accents.html" class="btn">Explore →</a>
+        
+<h3>Feather Forge</h3>
+<p>Lightweight yet durable panels adding texture and style to your interiors.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/FLORENT FRAME/florent_frame2.png" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+        
+<h3>Florent Frame</h3>
+<p>Refined laminated finishes that elevate elegance in any room.</p>
+ <a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/FLUTED GRAIN STRIP AND FLUTED TRIANGULAR GRAIN STRIP/fluted_grain_strip_and_fluted_triangular_grain_strip4.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+        
+<h3>Fluted Grain Strip</h3>
+<p>Modern geometric panels that bring depth and sophistication to walls.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/MUSHROOM STONE/mushroom_stone1.png"  alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Mushroom Stone</h3>
+<p>Natural-inspired textures that create warm, inviting interiors.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/NATURAL STONE/natural_stone3.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Natural Stone</h3>
+<p>Authentic stone finishes for timeless beauty and durability.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/OCEAN WAVE/ocean_wave3.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Ocean Wave</h3>
+<p>Flowing wave patterns that bring serenity and motion to your space.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/OVAL OASIS/oval_oasis1.png" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Oval Oasis</h3>
+<p>Soft, rounded panels designed for harmony and modern flair.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/ROCK STONE/rock_stone1.jpg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Rock Stone</h3>
+<p>Bold textures that add character and strength to your interiors.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/ROCKEY MOUNTAIN/rockey_mountain2.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Rockey Mountain</h3>
+<p>Rustic and rugged panels inspired by majestic mountain landscapes.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div> <!-- Fluted Panels -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/TEXTURER CEMENT/texturer_cement1.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Texturer Cement</h3>
+<p>Industrial chic cement finishes that complement contemporary spaces.</p>
+<a href="#" class="btn">Explore →</a>
       </div>
     </div>
-  </section>
-
-  <!-- Feature Highlights -->
-  <section class="about-section">
-    <div class="about-content">
-      <h2>Why Choose Star Dec Products from Archedge?</h2>
-      <p>Star Dec is renowned for innovative decorative solutions that combine aesthetic excellence with superior performance. As authorized suppliers in Hyderabad, Archedge ensures you get genuine Star Dec products with competitive pricing and reliable supply. No installation services - we focus on supplying quality materials for your projects.</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>Creative Finishes</h3>
-          <p>Texture-rich surfaces and modern forms ideal for statement walls and ceilings.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Durable & Lightweight</h3>
-          <p>PU and PVC construction for long life, weather resistance, and low maintenance.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i class="fas fa-tools"></i></div>
-          <h3>Easy to Install</h3>
-          <p>All Star Dec panels are designed for quick and clean installations with minimal tools.</p>
-        </div>
+    <!-- Interior Design Finishes -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/THREE LAYERED HOLO SQUARE, PYRAMID, SLIDING/three_layered_holo_square,_pyramid,_sliding3.jpeg" alt="Stanza Decor Interior Finishes - Premium Laminated Surfaces">
+      </div>
+      <div class="product-category-content">
+<h3>Three Layered Finishes</h3>
+<p>Dynamic layered designs that add dimension and luxury to interiors.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div>
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/EGYPTIAN PYRAMID/egyptian_pyramid1.png" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Fluted Panels</h3>
+<p><br>Transform any space with sleek, acoustic-friendly vertical fluted designs.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+      </div>
+    
+    
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/VINTAGE BRICK WALL, INDUSTRIAL BRICK WALL/vintage_brick_wall,_industrial_brick_wall1.png" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Vintage & Industrial Brick</h3>
+<p>Bring vintage charm and urban edge to your walls with brick panels.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div>
+    
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/WATER WAVE/water_wave1.png" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Water Wave</h3>
+<p>Elegant wave patterns that create calming, fluid wall designs.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div>
+    
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Future DECOR/WOOD RING/wood_ring1.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
+      </div>
+      <div class="product-category-content">
+<h3>Wood Ring</h3>
+<p>Warm wooden textures that bring nature’s beauty indoors.</p><a href="#" class="btn">Explore →</a>
       </div>
     </div>
   </section>
@@ -268,29 +410,9 @@
   <div class="footer-bottom">
     &copy; 2025 Archedge Interiors. All Rights Reserved.
   </div>
+
 </footer>
-
-<!-- Script -->
 <script src="../../assets/js/navbar.js"></script>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const category = entry.target.closest('.product-category');
-      if (category && entry.isIntersecting) {
-        category.classList.add('animated');
-      } else if (category) {
-        category.classList.remove('animated');
-      } else {
-        entry.target.classList.toggle('animated', entry.isIntersecting);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  const elements = document.querySelectorAll(
-    '.products-hero, .feature-card, .about-section, .product-category-content, .hero-subtitle'
-  );
-  elements.forEach(el => observer.observe(el));
-</script>
-
+<script src="../../assets/js/brand-products.js"></script>
 </body>
 </html>

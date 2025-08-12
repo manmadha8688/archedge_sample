@@ -3,138 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Star Dec Products - Premium 3D Wall Panels & PU Stones | Archedge Hyderabad</title>
-  <meta name="description" content="Discover Star Dec's premium collection of 3D decorative wall panels, PU stones, and artistic accents. Waterproof, termite-resistant panels perfect for modern interiors in Hyderabad. Supplier & distributor of quality Star Dec products.">
+  <title>Stanza Decor Products - Designer Wall Panels & Fluted Designs | Archedge Hyderabad</title>
+  <meta name="description" content="Premium Stanza Decor wall panels, fluted designs, and interior finishes available in Hyderabad. Waterproof decorative panels for modern interiors. Authorized supplier & distributor of Stanza Decor products.">
   <link rel="stylesheet" href="../../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../../assets/css/brand-products.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-  }
-
-  .hero {
-    background: #f5f5f5;
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #111;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-title span {
-    display: inline-block;
-    transform: translateY(100%);
-    animation: slideUp 0.5s ease forwards;
-  }
-
-  @keyframes slideUp {
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  .main-content {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .products-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-
-  .product-category {
-    background-color: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 350px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .product-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .product-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .product-category-content {
-    padding: 20px;
-    text-align: left;
-  }
-
-  .product-category-content h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    color: #222;
-  }
-
-  .brand-name {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-    color: #777;
-  }
-
-  .product-category-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: #333;
-  }
-
-  @media (min-width: 768px) {
-    .product-category {
-      flex: 1 1 calc(33.333% - 30px);
-    }
-  }
-</style>
 
 <body>
 
+<!-- Scroll Progress Indicator -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- Header -->
-<header class="header">
+<header id="heroHeader" class="header">
         <div class="container">
             <nav class="navbar">
                <a href="../../"> <img src="../../assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
                 
-                <a href="../../"> 
+                <a href="./"> 
                 <div class="nav-company">
                     <div class="company-info">
                         
@@ -167,65 +55,65 @@
     </a>
     <div class="brands-dropdown">
         <div class="brands-row">
-            <a href="../" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="../../assets/images/elevate1.webp" alt="All Products" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View All Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">All Products</div>
-            </a>
-            
-            <a href="../stardec/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=100&fit=crop&crop=center" alt="Star Dec Products" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Star Dec Products</div>
-            </a>
-            
-            <a href="../stanza/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=150&h=100&fit=crop&crop=center" alt="Stanza Decor" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Stanza Decor</div>
-            </a>
-            
-            <a href="../future decore/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=150&h=100&fit=crop&crop=center" alt="Future Decore Industries" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Future Decore Industries</div>
-            </a>
-            
-            <a href="../pare/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=150&h=100&fit=crop&crop=center" alt="Pare India" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Pare India</div>
-            </a>
-            
-            <a href="../vox/" class="brand-item">
-                <div class="brand-image-container">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=100&fit=crop&crop=center" alt="Vox India" class="brand-image">
-                    <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                    </div>
-                </div>
-                <div class="brand-name">Vox India</div>
-            </a>
+    <a href="../" class="brand-item">
+        <div class="brand-image-container">
+            <img src="/assets/images/elevate1.webp" alt="All Products" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View All Products</span>
+            </div>
+        </div>
+        <div class="brand-name">All Products</div>
+    </a>
+    
+    <a href="../stardec/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=100&fit=crop&crop=center" alt="Star Dec Products" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Star Dec Products</div>
+    </a>
+    
+    <a href="../stanza/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=150&h=100&fit=crop&crop=center" alt="Stanza Decor" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Stanza Decor</div>
+    </a>
+    
+    <a href="../future decore/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=150&h=100&fit=crop&crop=center" alt="Future Decore Industries" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Future Decore Industries</div>
+    </a>
+    
+    <a href="../pare/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=150&h=100&fit=crop&crop=center" alt="Pare India" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Pare India</div>
+    </a>
+    
+    <a href="../vox/" class="brand-item">
+        <div class="brand-image-container">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=100&fit=crop&crop=center" alt="Vox India" class="brand-image">
+            <div class="brand-overlay">
+                <span class="view-products-text">View Products</span>
+            </div>
+        </div>
+        <div class="brand-name">Vox India</div>
+    </a>
         </div>
     </div>
 </li>
@@ -259,61 +147,71 @@
         </div>
     </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1 class="hero-title" data-text="Star Dec">star dec</h1>
-  
 
+<!-- Hero Section -->
+<section class="hero-section" id="heroSection">
+  <!-- Parallax Background Layers -->
+  <div class="parallax-container">
+    <div class="parallax-layer layer-1" data-speed="0.2"></div>
+    <div class="parallax-layer layer-2" data-speed="0.5"></div>
+    <div class="parallax-layer layer-3" data-speed="0.8"></div>
+  </div>
+  
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <div class="float-element float-1" data-speed="0.3"></div>
+    <div class="float-element float-2" data-speed="0.6"></div>
+    <div class="float-element float-3" data-speed="0.4"></div>
+  </div>
+  
+  <!-- Hero Content with Parallax -->
+  <div class="hero-content" data-speed="0.1">
+    <h1 class="hero-title" data-text=" Star     Dec     Products ">
+      Star dec  Products
+    </h1>
+    
+
+  </div>
+  
+ 
 </section>
 
 
-
 <main class="main-content">
-  <!-- Introduction -->
   
 
-  <!-- Star Dec Product Grid -->
+
+  <!-- Product Grid -->
   <section class="products-grid" id="products">
-    <!-- PVC 3D Panels -->
+    <!-- Decorative Wall Panels -->
+    
+    
     <div class="product-category">
       <div class="product-image">
-        <img src="../../assets/images/elevate1.webp" alt="Star Dec PVC 3D Wall Panels - Waterproof Decorative Panels">
+        <img src="../../assets/images/brands/StarDECOR/LOUVERS/louvers1.jpeg" style="transform: scale(1.1);" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
       </div>
       <div class="product-category-content">
-        <h3>Star Dec 3D Wall Panels</h3>
-        <p class="brand-name">Brand: Star Dec Products</p>
-        <p>Premium 3D decorative wall panels crafted from high-quality PVC. These lightweight, waterproof panels add stunning dimension and texture to interior walls. Perfect for feature walls, restaurants, offices, and modern homes in Hyderabad.</p>
-        <a href="pvc-3d-panels.html" class="btn">Explore →</a>
+<h3> </h3>
+<p>Natural wood-inspired louvers that add warmth and style to any ceiling or wall.</p>
+<a href="#" class="btn">Explore →</a>
       </div>
     </div>
 
-    <!-- PU Stones -->
     <div class="product-category">
       <div class="product-image">
-        <img src="../../assets/images/cover1.jpeg" alt="Star Dec PU Stone Panels - Natural Stone Look Decorative Panels">
+        <img src="../../assets/images/brands/StarDECOR/Pannels/pannels1.jpeg" alt="Stanza Decor Decorative Wall Panels - Designer Interior Panels">
       </div>
       <div class="product-category-content">
-        <h3>Star Dec PU Stone Panels</h3>
-        <p class="brand-name">Brand: Star Dec Products</p>
-        <p>Authentic-looking polyurethane stone panels that replicate natural stone textures without the weight. These weather-resistant, termite-proof panels are perfect for both interior and exterior applications. Ideal for accent walls, facades, and decorative features.</p>
-        <a href="pu-stones.html" class="btn">Explore →</a>
+        <h3> </h3>
+  <p>Modern soffit panels designed for sleek, seamless architectural finishes.</p>
+        <a href="#" class="btn">Explore →</a>
       </div>
     </div>
 
-    <!-- Star Decor Accents -->
-    <div class="product-category">
-      <div class="product-image">
-        <img src="../../assets/images/logo.png" alt="Star Dec Decorative Accents - Artistic Wall Moldings and Panels">
-      </div>
-      <div class="product-category-content">
-        <h3>Star Dec Decorative Accents</h3>
-        <p class="brand-name">Brand: Star Dec Products</p>
-        <p>Exquisite decorative accent pieces including carved panels, artistic moldings, and signature motifs. These premium accents enhance walls, ceilings, and furniture with sophisticated design elements. Perfect for luxury interiors and commercial spaces.</p>
-        <a href="star-dec-accents.html" class="btn">Explore →</a>
-      </div>
-    </div>
   </section>
 
+
+</main>
 
 <!-- Footer -->
 <footer class="footer">
@@ -357,43 +255,9 @@
   <div class="footer-bottom">
     &copy; 2025 Archedge Interiors. All Rights Reserved.
   </div>
+
 </footer>
-
-<!-- Script -->
 <script src="../../assets/js/navbar.js"></script>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const category = entry.target.closest('.product-category');
-      if (category && entry.isIntersecting) {
-        category.classList.add('animated');
-      } else if (category) {
-        category.classList.remove('animated');
-      } else {
-        entry.target.classList.toggle('animated', entry.isIntersecting);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  const elements = document.querySelectorAll(
-    '.products-hero, .feature-card, .about-section, .product-category-content, .hero-subtitle'
-  );
-  elements.forEach(el => observer.observe(el));
-
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".hero-title");
-    const text = title.getAttribute("data-text");
-    title.innerHTML = ""; // Clear original
-
-    [...text].forEach((char, i) => {
-      const span = document.createElement("span");
-      span.textContent = char;
-      span.style.animationDelay = `${i * 0.05}s`;
-      title.appendChild(span);
-    });
-  });
-</script>
-
+<script src="../../assets/js/brand-products.js"></script>
 </body>
 </html>

@@ -557,32 +557,7 @@ const imgs = document.querySelectorAll('.circle-container img');
     });
 });
 
-  // FAQ Toggle Functionality
-  function initFaqToggle() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(question => {
-      question.addEventListener('click', function() {
-        const faqItem = this.closest('.faq-item');
-        
-        // Close other open FAQ items (optional - remove if you want multiple open)
-        const allFaqItems = document.querySelectorAll('.faq-item');
-        allFaqItems.forEach(item => {
-          if (item !== faqItem && item.classList.contains('active')) {
-            item.classList.remove('active');
-          }
-        });
-        
-        // Toggle current FAQ item
-        faqItem.classList.toggle('active');
-      });
-    });
-  }
 
-  // Initialize FAQ functionality when DOM is loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    initFaqToggle();
-  });
 
   // Additional utility functions
 function debounce(func, wait) {

@@ -10,14 +10,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<style>
-  #heroHeader,
-#heroSection {
-  transition: transform 0.5s ease-in-out;
-}
 
-</style>
 <body>
+
+<!-- Scroll Progress Indicator -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- Header -->
 <header id="heroHeader" class="header">
@@ -153,10 +150,30 @@
 
 <!-- Hero Section -->
 <section class="hero-section" id="heroSection">
-  <div class="hero-content">
-  <h1 class="hero-title" data-text="Stanza Decor Products">Stanza Decor Products </h1>
-    <p class="hero-subtitle">Premium supplier of Stanza Decor's innovative wall panels, fluted designs, and decorative finishes in Hyderabad. </p>
+  <!-- Parallax Background Layers -->
+  <div class="parallax-container">
+    <div class="parallax-layer layer-1" data-speed="0.2"></div>
+    <div class="parallax-layer layer-2" data-speed="0.5"></div>
+    <div class="parallax-layer layer-3" data-speed="0.8"></div>
   </div>
+  
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <div class="float-element float-1" data-speed="0.3"></div>
+    <div class="float-element float-2" data-speed="0.6"></div>
+    <div class="float-element float-3" data-speed="0.4"></div>
+  </div>
+  
+  <!-- Hero Content with Parallax -->
+  <div class="hero-content" data-speed="0.1">
+    <h1 class="hero-title" data-text=" Stanza      Decor      Products ">
+      Stanza Products
+    </h1>
+    
+
+  </div>
+  
+ 
 </section>
 
 
@@ -167,44 +184,33 @@
   <!-- Product Grid -->
   <section class="products-grid" id="products">
     <!-- Decorative Wall Panels -->
+    
+    
     <div class="product-category">
       <div class="product-image">
-        <img src="../../assets/images/elevate1.webp" alt="Stanza Decor Decorative Wall Panels - Designer Interior Panels">
+        <img src="../../assets/images/brands/Stanza/Soffit Louvers/soffit_louvers1.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
       </div>
       <div class="product-category-content">
-        <h3>Stanza Decor Wall Panels</h3>
-        <p class="brand-name">Brand: Stanza Decor</p>
-        <p>Premium decorative wall panels designed for sophisticated interiors. These high-quality panels feature contemporary designs, waterproof properties, and easy installation. Perfect for accent walls, offices, hotels, and modern homes in Hyderabad.</p>
+<h3>Soffit Louvers</h3>
+<p>Natural wood-inspired louvers that add warmth and style to any ceiling or wall.</p>
+<a href="#" class="btn">Explore →</a>
+      </div>
+    </div>
+
+    <div class="product-category">
+      <div class="product-image">
+        <img src="../../assets/images/brands/Stanza/Soffit Panels/soffit_panels4.jpeg" alt="Stanza Decor Decorative Wall Panels - Designer Interior Panels">
+      </div>
+      <div class="product-category-content">
+        <h3>Soffit Panels</h3>
+  <p>Modern soffit panels designed for sleek, seamless architectural finishes.</p>
         <a href="#" class="btn">Explore →</a>
       </div>
     </div>
 
-    <!-- Fluted Panels -->
-    <div class="product-category">
-      <div class="product-image">
-        <img src="../../assets/images/cover1.jpeg" alt="Stanza Decor Fluted Panels - Modern Vertical Design Panels">
-      </div>
-      <div class="product-category-content">
-        <h3>Stanza Decor Fluted Panels</h3>
-        <p class="brand-name">Brand: Stanza Decor</p>
-        <p>Contemporary vertical fluted panels that create stunning linear patterns on walls and ceilings. These lightweight, durable panels offer excellent acoustic properties and are easy to maintain. Ideal for modern offices, restaurants, and residential spaces.</p>
-        <a href="#" class="btn">Explore →</a>
-      </div>
-    </div>
-
-    <!-- Interior Design Finishes -->
-    <div class="product-category">
-      <div class="product-image">
-        <img src="../../assets/images/logo.png" alt="Stanza Decor Interior Finishes - Premium Laminated Surfaces">
-      </div>
-      <div class="product-category-content">
-        <h3>Stanza Decor Interior Finishes</h3>
-        <p class="brand-name">Brand: Stanza Decor</p>
-        <p>Premium laminated and textured finishes that enhance walls, doors, and partitions with sophisticated appeal. These high-quality finishes offer superior durability, scratch resistance, and easy maintenance while adding depth and elegance to any interior space.</p>
-        <a href="#" class="btn">Explore →</a>
-      </div>
-    </div>
   </section>
+
+
 </main>
 
 <!-- Footer -->
@@ -252,60 +258,6 @@
 
 </footer>
 <script src="../../assets/js/navbar.js"></script>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const category = entry.target.closest('.product-category');
-      if (category && entry.isIntersecting) {
-        category.classList.add('animated');
-      } else if (category) {
-        category.classList.remove('animated');
-      } else {
-        entry.target.classList.toggle('animated', entry.isIntersecting);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  const elements = document.querySelectorAll(
-    '.products-hero, .feature-card, .about-section, .product-category-content, .hero-subtitle'
-  );
-  elements.forEach(el => observer.observe(el));
-
-   document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".hero-title");
-    const text = title.getAttribute("data-text");
-    title.innerHTML = ""; // Clear original
-
-    [...text].forEach((char, i) => {
-      const span = document.createElement("span");
-      span.textContent = char;
-      span.style.animationDelay = `${i * 0.05}s`;
-      title.appendChild(span);
-    });
-  });
-
-   document.querySelector('.scroll-down-indicator')?.addEventListener('click', () => {
-    const nextSection = document.querySelector('.products-section'); // change if needed
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-
-   const header = document.getElementById('heroHeader');
-const heroSection = document.getElementById('heroSection');
-
-setInterval(() => {
-  if (window.scrollY <= 250) {
-    header.style.transform = 'translateY(-30px)';
-    heroSection.style.transform = 'translateY(-30px)';
-
-    setTimeout(() => {
-      header.style.transform = 'translateY(0)';
-      heroSection.style.transform = 'translateY(0)';
-    }, 700);
-  }
-}, 3000);
-
-</script>
+<script src="../../assets/js/brand-products.js"></script>
 </body>
 </html>
