@@ -430,13 +430,11 @@
     <script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.target.classList.contains('product-category-content')) {
+      if (entry.target.classList.contains('product-category')) {
         const category = entry.target.closest('.product-category');
         if (category) {
           if (entry.isIntersecting) {
             category.classList.add('animated');
-          } else {
-            category.classList.remove('animated');
           }
         }
       } else {
@@ -450,7 +448,7 @@
   }, { threshold: 0.2 });
 
   const elements = document.querySelectorAll(
-    '.products-hero, .feature-card, .about-section, .product-category-content, .hero-subtitle'
+    '.products-hero, .feature-card, .about-section, .product-category, .hero-subtitle'
   );
   elements.forEach(el => observer.observe(el));
 </script>
