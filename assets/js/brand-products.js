@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('heroHeader');
   const heroSection = document.getElementById('heroSection');
   setInterval(() => {
-    if (window.scrollY <= 250) {
+    if (window.scrollY <= 150) {
       header.style.transform = 'translateY(-30px)';
       heroSection.style.transform = 'translateY(-30px)';
       setTimeout(() => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSection.style.transform = 'translateY(0)';
       }, 500);
     }
-  }, 3800);
+  }, 3500);
 
   // Animated hero title letters
   const title = document.querySelector(".hero-title");
