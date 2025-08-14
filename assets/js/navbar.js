@@ -68,9 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Header scroll effect
-    let lastScrollTop = 0;
-    
+    // Header scroll effect - always sticky at top
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
@@ -81,16 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
         
-        // Hide/show header on scroll (optional)
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
+        // Always keep header visible at top
+        header.style.transform = 'translateY(0)';
     });
     
     // Add transition to header
@@ -142,6 +132,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Remove previous scroll-based active link highlighting
-    // (Optional: If you want to keep scroll-based highlighting for single page sections, you can keep this)
+    
 });

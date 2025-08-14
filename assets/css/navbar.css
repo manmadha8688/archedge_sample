@@ -54,7 +54,7 @@ a {
 
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(254, 251, 251, 0.98);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(0) scale(1);
     backdrop-filter: blur(20px);
@@ -116,7 +116,7 @@ a {
     /* Empty spacer for grid layout */
 }
 .navbar-logo {
-  height: 100px;
+  height: 80px;
   width: auto;
   margin-left: 0px;
     transition: transform 0.3s ease;
