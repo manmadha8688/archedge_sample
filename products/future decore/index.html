@@ -29,6 +29,8 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../../assets/css/navbar.css" />
   <link rel="stylesheet" href="../../assets/css/brand-products.css" />
+  <link rel="stylesheet" href="../../assets/css/flip-book.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -51,8 +53,24 @@
 
 <body>
 
-<!-- Scroll Progress Indicator -->
-<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Modal -->
+<div id="pdfModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>ARCHEDGE Flipbook Viewer</h2>
+    <div id="page-num">Page: 1 / 0</div>
+    <div id="flipbook-container">
+      <div class="canvas-wrapper">
+        <canvas id="page-left" class="page left"></canvas>
+        <canvas id="page-right" class="page right"></canvas>
+      </div>
+      <div id="prevArrow" class="arrow">&#10094;</div>
+      <div id="nextArrow" class="arrow">&#10095;</div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Header -->
 <header id="heroHeader" class="header">
@@ -221,7 +239,7 @@
       <div class="product-category-content">
         <h2>PU Stones & Leafs Collection</h2>
         <p>Elegant and unique wall panels that redefine modern interior aesthetics. These lightweight PU stone panels offer the perfect blend of natural stone appearance with modern material benefits including waterproof properties and easy installation.</p>
-        <a href="ARCHEDGE PU STONES & LEAFS.pdf" class="btn" aria-label="Download Future Decore PU Stones & Leafs catalog PDF">Explore Collection →</a>
+         <button id="exploreBtn" value="pu" class="btn" aria-label="Download Future Decore PU Stones & Leafs catalog PDF">Explore Collection → </button>
       </div>
     </div>
   </section>
@@ -272,5 +290,37 @@
 </footer>
 <script src="../../assets/js/navbar.js"></script>
 <script src="../../assets/js/brand-products.js"></script>
+
+<script>
+const exploreBtn = document.getElementById('exploreBtn');
+const modal = document.getElementById('pdfModal');
+const closeBtn = document.querySelector('.close');
+
+exploreBtn.addEventListener('click', async () => {
+    // Show modal
+    modal.style.display = 'block';
+
+    // Get PDF file name from button value or data attribute
+    const pdfName = exploreBtn.value || exploreBtn.dataset.pdf;
+
+    // Dynamically import flipbook JS and pass PDF name
+    const flipbookModule = await import('../../assets/js/flip-book.js');
+
+    // Call the function from your module to load PDF
+    // Make sure flip-book.js exports a function like openPDF(pdfName)
+    flipbookModule.openPDF(pdfName);
+});
+
+// Close modal
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close if click outside modal
+window.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+});
+</script>
+
 </body>
 </html>
