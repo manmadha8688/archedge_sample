@@ -20,19 +20,19 @@ let currentSlide = 0;
 const testimonials = [
     {
       name: " Kumar Swamy ",
-      text: "These panels changed the whole vibe of our restaurant. They’re stunning, durable, and super easy to clean — exactly what we needed!",
+      text: "The living room looks stunning with Archedge’s decorative wall panels and stylish ceiling—truly elevates the space!",
       image: "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Brown&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue01&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Light",
       bg: "./assets/images/homepage/review1.jpg"
     },
     {
       name: " Lalitha ",
-      text: "From design to finish, the product speaks class. Our hall looks premium, and clients notice it instantly!",
+      text: "Our lounge area feels modern and luxurious thanks to Archedge’s premium panels and smart designs.",
       image: "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Kurt&hairColor=Blonde&facialHairType=Blank&clotheType=BlazerShirt&clotheColor=PastelBlue&eyeType=Wink&eyebrowType=RaisedExcited&mouthType=Twinkle&skinColor=Tanned",
       bg: "./assets/images/homepage/review2.jpg"
     },
     {
       name: " Praveen Kumar",
-      text: "Great texture, solid material, and exceptional support team. Highly recommended for interior designers and architects.",
+      text: "Archedge transformed our interior with sleek wall panels and elegant ceiling finishes—beautiful and durable!",
       image: "https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Round&hairColor=Black&facialHairType=MoustacheMagnum&clotheType=ShirtVNeck&clotheColor=Heather&eyeType=Squint&eyebrowType=DefaultNatural&mouthType=Serious&skinColor=Light",
       bg: "./assets/images/homepage/review3.jpg"
     }

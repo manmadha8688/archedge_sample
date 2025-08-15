@@ -498,6 +498,13 @@ body {
   letter-spacing: 0.5px;
 }
 
+.product-category-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #1e3a8a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
 .product-category-content .brand-name {
   font-weight: 600;
   color: #6b7280;
