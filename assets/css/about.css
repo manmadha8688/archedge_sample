@@ -448,3 +448,188 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+
+
+        /* === Global adjustments for all devices === */
+body {
+    font-size: 16px;
+}
+
+.hero-section {
+    height: 60vh; /* reduce on smaller screens via media queries */
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 2rem; /* adjust for smaller screens */
+}
+
+/* Two-column layout adjustments */
+.two-column {
+    flex-wrap: wrap;
+}
+
+
+
+/* Feature card text */
+.feature-card h3 {
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+}
+
+/* CTA Section */
+.cta-section h2 {
+    font-size: 2.2rem;
+}
+
+.cta-section p {
+    font-size: 1rem;
+}
+
+/* Values Section */
+.values-content p {
+    font-size: 1rem;
+}
+
+/* === Media Queries === */
+
+/* Small devices: phones (≤ 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .two-column {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .image-block img {
+        height: 200px;       /* adjust as needed */
+        display: block;
+        object-fit: cover;
+    }
+
+    .text-block h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section p {
+        font-size: 0.95rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Medium devices: tablets (≤ 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 55vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .two-column {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .image-block img {
+        height: 200px;       /* adjust as needed */
+        display: block;
+        object-fit: cover;
+    }
+
+    .text-block h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large devices: mini laptops (≤ 1024px) */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .image-block img {
+        height: 450px;
+    }
+
+    .text-block h2 {
+        font-size: 2.1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra large screens: desktops (> 1200px) */
+@media (min-width: 1200px) {
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .image-block img {
+        height: 400px;
+    }
+
+    .text-block h2 {
+        font-size: 2.2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 3.2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.4rem;
+    }
+}
