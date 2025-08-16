@@ -151,7 +151,7 @@ const resizeAndRender = async () => {
 
 // --- DYNAMIC PDF LOAD FUNCTION ---
 export async function openPDF(filename) {
-  const url = `/assets/pdfs/${filename}.pdf`; // update path
+  const url = `/archedge_sample/assets/pdfs/${filename}.pdf`; // update path
   pdfDoc = await pdfjsLib.getDocument({ url, useSystemFonts: true }).promise;
   pageNum = 1;
 
