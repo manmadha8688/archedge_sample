@@ -68,14 +68,37 @@ const showNext = async () => {
     canvasLeft.style.zIndex = 1;
     canvasLeft.style.transform = 'rotateY(0deg)';
   } else {
-    if (pageNum + 2 > pdfDoc.numPages + 1) return;
-    canvasRight.style.zIndex = 10;
-    canvasRight.style.transform = 'rotateY(-180deg)';
-    await new Promise(r => setTimeout(r, 600));
-    pageNum += 2;
-    await renderSpread();
-    canvasRight.style.zIndex = 1;
-    canvasRight.style.transform = 'rotateY(0deg)';
+    
+   
+    if (pageNum + 1 > pdfDoc.numPages) return; // prevent overflow
+
+  canvasRight.style.transition = "transform 0.6s ease";
+  canvasRight.style.zIndex = 10;
+
+  // Step 1: Start flipping (0 → -90deg)
+  canvasRight.style.transform = "rotateY(-190deg)";
+
+  // Wait until half flip
+  await new Promise(r => setTimeout(r, 500));
+
+  // Step 2: Swap to next pages while hidden at 90°
+  pageNum += 2;
+  
+   await renderPage(pageNum + 1, canvasRight, ctxRight);
+
+  // Step 3: Continue flipping (-90deg → -180deg)
+    canvasRight.style.transition = "transform 0.6s ease";
+
+
+  // Step 4: Reset instantly back to 0deg for next flip cycle
+  canvasRight.style.transition = "none";
+  canvasRight.style.transform = "rotateY(0deg)";
+   renderPage(pageNum, canvasLeft, ctxLeft); 
+  canvasRight.style.zIndex = 1;
+
+  
+  document.getElementById('page-num').textContent = `Page: ${pageNum} / ${pdfDoc.numPages}`;
+
   }
 };
 
@@ -128,7 +151,7 @@ const resizeAndRender = async () => {
 
 // --- DYNAMIC PDF LOAD FUNCTION ---
 export async function openPDF(filename) {
-  const url = `/archedge_sample/assets/pdfs/${filename}.pdf`; // update path
+  const url = `/assets/pdfs/${filename}.pdf`; // update path
   pdfDoc = await pdfjsLib.getDocument({ url, useSystemFonts: true }).promise;
   pageNum = 1;
 

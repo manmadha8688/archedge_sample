@@ -6,10 +6,13 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 20px 0;
+  margin:  0;
+  top:0;
   width: 100%;
 }
-
+h2{
+  text-align: center;
+}
 .canvas-wrapper {
   position: relative;
   width: 90vw;
@@ -64,6 +67,7 @@
 #page-num {
   margin-top: 10px;
   font-size: 16px;
+  text-align: center;
 }
 
 /* Responsive adjustments */
@@ -72,11 +76,11 @@
 @media screen and (min-width: 1600px) {
   .canvas-wrapper {
     width: 1400px;
-    height: 85vh;
+    height: 95vh;
   }
   .page {
     width: 680px;
-    height: 85vh;
+    height: 95vh;
   }
   .page.left { left: 20px; }
   .page.right { left: 720px; }
@@ -86,9 +90,9 @@
 @media screen and (max-width: 1600px) and (min-width: 1024px) {
   .canvas-wrapper {
     width: 90vw;
-    height: 70vh;
+    height: 80vh;
   }
-  .page { width: 44%; height: 70vh; }
+  .page { width: 44%; height: 80vh; }
   #prevArrow { left: 50px; }
 #nextArrow { right: 80px; }
 }
@@ -98,11 +102,11 @@
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .canvas-wrapper { 
     width: 90vw;  /* leave some gap from screen edges */
-    height: 50vh; 
+    height: 55vh; 
   }
   .page { 
     width: 44%;       /* each page width */
-    height: 45vh; 
+    height: 50vh; 
   }
   .page.left { left: 3%; }    /* small gap from left edge */
   .page.right { left: 53%; }  /* left + width + small gap */
@@ -136,7 +140,7 @@
   position: fixed;
   z-index: 9999;
   left: 0;
-  top: 0;
+  top: 0px;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -146,10 +150,11 @@
 /* Modal content */
 .modal-content {
   background-color: #f4f4f4;
-  margin: 50px auto;
+  margin: 0px auto;
   padding: 20px;
   border-radius: 10px;
   width: 95%;
+  top:0;
   max-width: 1600px;
   position: relative;
 }
